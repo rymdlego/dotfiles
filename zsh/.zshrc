@@ -1,5 +1,5 @@
 # PATHS
-[ -d "/opt/homebrew/bin" ] && PATH="/opt/homebrew/bin:$PATH"
+# [ -d "/opt/homebrew/bin" ] && PATH="/opt/homebrew/bin:$PATH"
 [ -d "$HOME/bin" ] && PATH="$HOME/bin:$PATH"
 [ -d "$HOME/.local/bin" ] && PATH="$HOME/.local/bin:$PATH"
 [ -d "$HOME/.config/tmux/plugins/t-smart-tmux-session-manager/bin" ] && PATH="$HOME/.config/tmux/plugins/t-smart-tmux-session-manager/bin:$PATH"
@@ -34,11 +34,11 @@ fi
 autoload -Uz compinit && compinit
 
 # SOURCE FILES
-[ -f ~/.zsh/functions.zsh ] && source ~/.zsh/functions.sh
-[ -f ~/.zsh/aliases.zsh ] && source ~/.zsh/aliases.sh
-[ -f ~/.zsh/fzf.zsh ] && source ~/.zsh/fzf.sh
-[ -f ~/.zsh/motd.zsh ] && source ~/.zsh/motd.sh
-[ -f ~/.zsh/ssh-agent.zsh ] && source ~/.zsh/ssh-agent.sh
+[ -f ~/.zsh/functions.sh ] && source ~/.zsh/functions.sh
+[ -f ~/.zsh/aliases.sh ] && source ~/.zsh/aliases.sh
+[ -f ~/.zsh/fzf.sh ] && source ~/.zsh/fzf.sh
+[ -f ~/.zsh/motd.sh ] && source ~/.zsh/motd.sh
+[ -f ~/.zsh/ssh-agent.sh ] && source ~/.zsh/ssh-agent.sh
 
 # ZOXIDE
 if command -v zoxide &> /dev/null; then

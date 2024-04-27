@@ -8,6 +8,7 @@ brew:
 				brew bundle
 
 install:
+				xcode-select --install
 				brew bundle
 				stow --verbose --target=$$HOME --restow */
 				bat cache --build

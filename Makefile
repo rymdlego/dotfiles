@@ -8,7 +8,7 @@ brew:
 				brew bundle
 
 install:
-				xcode-select --install
 				make brew stow
 				bat cache --build
 				git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
+				echo "Use prefix-I in tmux to install plugins."

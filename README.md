@@ -1,15 +1,16 @@
 ## My dotfiles for MacOS
 
-Prereq: Have *Homebrew* installed.
+Prereqs: _xcode command line tools_ and _Homebrew_ installed.
 
 ```
+xcode-select --install
 curl -fsSL -o install.sh https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
 ```
 
-Then we do things with the *make*.
+Then we do things with the _make_.
 
-`make install` will install Xcode package, all Brewfile packages, and stow all dotfiles into place, and some additional post-commands to set things up.
+`make install` will install all Brewfile packages, and stow dotfiles into place, and some additional post commands.
 
 `make stow` will do the dotfiles stowing only.
 
-`make brew` will do the package installing only.
+`make brew` will do the Brew package installing only.

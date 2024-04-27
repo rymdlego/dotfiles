@@ -1,16 +1,12 @@
 [user]
-        email = jakob@sub.se
-        name = Jakob
+  email = jakob@sub.se
+  name = Jakob
 [init]
-        defaultBranch = master
+  defaultBranch = master
 [help]
 	autocorrect = 1
 [core]
-        sshCommand = ssh -i ~/.ssh/sub
-        editor = nvim
+  sshCommand = ssh -i ~/.ssh/sub
+  editor = nvim
 [includeIf "gitdir:~/dev/pdc/"]
-  path = .gitconfig-pdc
-[includeIf "gitdir:~/dev/iver/"]
-  path = .gitconfig-iver
-[includeIf "gitdir:~/Library/Mobile Documents/iCloud~md~obsidian/Documents/writing/"]
   path = .gitconfig-pdc

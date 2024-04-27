@@ -8,7 +8,7 @@ function iplookup {
   curl ipinfo.io/$1
 }
 
-function v() {
+function vim_flexible_open() {
     if [[ -z "$1" ]]; then
         # No parameter provided, use fzf to select a file interactively
         local file=$(__fsel)

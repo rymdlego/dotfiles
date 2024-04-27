@@ -1,0 +1,5 @@
+[user]
+	email = postdisastercat@protonmail.com
+	name = Jakob
+[core]
+  sshCommand = ssh -i ~/.ssh/pdc

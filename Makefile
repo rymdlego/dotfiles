@@ -7,6 +7,7 @@ delete:
 brew:
 				brew bundle
 
-all:
+install:
 				stow --verbose --target=$$HOME --restow */
 				brew bundle
+				bat cache --build

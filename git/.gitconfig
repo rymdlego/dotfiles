@@ -8,3 +8,5 @@
 [core]
   sshCommand = ssh -i ~/.ssh/sub
   editor = nvim
+[includeIf "gitdir:~/dev/pdc/"]
+  path = ~/dev/pdc/.gitconfig

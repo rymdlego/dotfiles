@@ -9,7 +9,6 @@ brew:
 
 install:
 				xcode-select --install
-				brew bundle
-				stow --verbose --target=$$HOME --restow */
+				make brew stow
 				bat cache --build
 				git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm

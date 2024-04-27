@@ -8,6 +8,7 @@ brew:
 				brew bundle
 
 install:
-				stow --verbose --target=$$HOME --restow */
 				brew bundle
+				stow --verbose --target=$$HOME --restow */
 				bat cache --build
+				git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm

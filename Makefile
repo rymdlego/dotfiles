@@ -10,5 +10,6 @@ brew:
 install:
 				make brew stow
 				bat cache --build
-				git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
+				mkdir -p $$HOME/.config/tmux/plugins
+				git clone https://github.com/tmux-plugins/tpm $$HOME/.config/tmux/plugins/tpm
 				echo "Use prefix-I in tmux to install plugins."

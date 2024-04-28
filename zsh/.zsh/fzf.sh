@@ -1,4 +1,4 @@
-# FZF
+#!/bin/sh
 
 # Init
 eval "$(fzf --zsh)"
@@ -39,7 +39,7 @@ _fzf_compgen_dir() {
 # - The first argument to the function is the name of the command.
 # - You should make sure to pass the rest of the arguments to fzf.
 _fzf_comprun() {
-  local command=$1
+  command="$1"
 
   shift
 

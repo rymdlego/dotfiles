@@ -1,4 +1,4 @@
-# ALIASES
+#!/bin/sh
 
 alias activate="source venv/bin/activate"
 alias c="clear"

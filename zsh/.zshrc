@@ -1,8 +1,6 @@
 # PATHS
-# [ -d "/opt/homebrew/bin" ] && PATH="/opt/homebrew/bin:$PATH"
 [ -d "$HOME/bin" ] && PATH="$HOME/bin:$PATH"
 [ -d "$HOME/.local/bin" ] && PATH="$HOME/.local/bin:$PATH"
-[ -d "$HOME/.config/tmux/plugins/t-smart-tmux-session-manager/bin" ] && PATH="$HOME/.config/tmux/plugins/t-smart-tmux-session-manager/bin:$PATH"
 
 # HISTORY
 export HISTSIZE=1000000000

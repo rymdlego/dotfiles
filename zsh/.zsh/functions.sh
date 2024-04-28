@@ -1,34 +1,33 @@
-# FUNCTIONS
+#!/bin/sh
 
 ds() {
-  echo $(date +%Y%m%d)
+  date +%Y%m%d
 }
 
-function iplookup {
-  curl ipinfo.io/$1
+iplookup() {
+  curl ipinfo.io/"$1"
 }
 
-function vim_flexible_open() {
-    if [[ -z "$1" ]]; then
+vim_flexible_open() {
+    if [ -z "$1" ]; then
         # No parameter provided, use fzf to select a file interactively
-        local file=$(__fsel)
-        if [[ -n "$file" ]]; then
+        file="$(__fsel)"
+        if [ -n "$file" ]; then
             file=$(echo "$file" | sed 's/ *$//') # __fsel adds a space that needs to be removed
             nvim "$file"
         fi
     else
-        local file=$(fzf_one_or_more_files "$1")
-        if [[ $? -eq 0 ]] && [[ -n "$file" ]]; then  # Check both success status and non-empty file
+        file="$(fzf_one_or_more_files "$1")"
+        if [ -n "$file" ]; then  # Check both success status and non-empty file
             file=$(echo "$file" | sed 's/ *$//') # __fsel adds a space that needs to be removed
             nvim "$file"
         fi
     fi
 }
 
-function fzf_one_or_more_files() {
-  local lines
+fzf_one_or_more_files() {
   lines=$(fzf --filter="$1" --no-sort)  # Initial filter attempt with fzf
-  local line_count=$(echo "$lines" | wc -l)
+  line_count="$(echo "$lines" | wc -l)"
   
   if [ -n "$lines" ] && [ "$line_count" -eq 1 ]; then
     echo "$lines"

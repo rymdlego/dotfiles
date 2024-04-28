@@ -1,5 +1,3 @@
-#!/bin/sh
-
 ds() {
 	date +%Y%m%d
 }

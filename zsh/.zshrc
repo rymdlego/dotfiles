@@ -9,8 +9,8 @@ export HISTFILE=~/.zsh_history
 export HIST_STAMPS="yyyy-mm-dd"
 
 # PROMPT
-if command -v starship &> /dev/null; then
-    eval "$(starship init zsh)"
+if command -v starship >/dev/null; then
+	eval "$(starship init zsh)"
 fi
 
 # VARS
@@ -21,24 +21,24 @@ export DOTFILES="$HOME/dotfiles"
 export BAT_THEME="Catppuccin-frappe"
 
 # KEYBOARD
-bindkey -e # make ctrl-p and other ctrl-commands work
+bindkey -e                                             # make ctrl-p and other ctrl-commands work
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}' # make lowercase tab-complete case insensitive
 
 # COMPLETIONS
 FPATH=$HOME/.zsh/completions:$FPATH
 if type brew &>/dev/null; then
-    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+	FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
 fi
 autoload -Uz compinit && compinit
 
 # SOURCE FILES
-[ -f ~/.zsh/functions.sh ] && source ~/.zsh/functions.sh
-[ -f ~/.zsh/aliases.sh ] && source ~/.zsh/aliases.sh
-[ -f ~/.zsh/fzf.sh ] && source ~/.zsh/fzf.sh
-[ -f ~/.zsh/motd.sh ] && source ~/.zsh/motd.sh
-[ -f ~/.zsh/ssh-agent.sh ] && source ~/.zsh/ssh-agent.sh
+[ -f "$HOME/.zsh/functions.sh" ] && source "$HOME/.zsh/functions.sh"
+[ -f "$HOME/.zsh/aliases.sh" ] && source "$HOME/.zsh/aliases.sh"
+[ -f "$HOME/.zsh/fzf.sh" ] && source "$HOME/.zsh/fzf.sh"
+[ -f "$HOME/.zsh/motd.sh" ] && source "$HOME/.zsh/motd.sh"
+[ -f "$HOME/.zsh/ssh-agent.sh" ] && source "$HOME/.zsh/ssh-agent.sh"
 
 # ZOXIDE
-if command -v zoxide &> /dev/null; then
-  eval "$(zoxide init zsh)"
+if command -v zoxide &>/dev/null; then
+	eval "$(zoxide init zsh)"
 fi

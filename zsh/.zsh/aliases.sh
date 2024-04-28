@@ -12,4 +12,4 @@ alias t="sesh connect"
 alias v="vim_flexible_open"
 alias vi="nvim"
 alias vim="nvim"
-alias wanip='dig @resolver4.opendns.com myip.opendns.com +short' 
+alias wanip='dig @resolver4.opendns.com myip.opendns.com +short'

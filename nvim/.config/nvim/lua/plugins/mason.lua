@@ -42,7 +42,8 @@ return {
         "yamlfmt", -- yaml formatter
         "yamllint", -- yaml linter
         "prettier", -- generic formatter
-        "shellcheck", -- shell script formatter
+        "shellcheck", -- shell script linter
+        "shfmt", -- shell script formatter
       },
     })
   end,

@@ -4,7 +4,7 @@
 [init]
   defaultBranch = master
 [help]
-	autocorrect = 1
+  autocorrect = 1
 [core]
   sshCommand = ssh -i ~/.ssh/sub
   editor = nvim

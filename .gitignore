@@ -1,2 +1,2 @@
-*.lock.json
+*lock.json
 tmux/.config/tmux/plugins/

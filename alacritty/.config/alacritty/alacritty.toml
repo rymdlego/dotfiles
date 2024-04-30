@@ -30,5 +30,5 @@ title = "Terminal"
 opacity = 0.95
 
 [window.padding]
-x = 3
-y = 3
+x = 8
+y = 8

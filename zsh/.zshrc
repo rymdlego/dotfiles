@@ -12,6 +12,12 @@ export GIT_EDITOR="nvim"
 export MANPAGER="less -X" # don’t clear the screen after quitting a manual page
 export BAT_THEME="Catppuccin-frappe"
 
+# NOTES
+export NOTES_PATH=$HOME/notes
+export NOTES_DAILIES=dailies
+export NOTES_PREFIX='- '
+export NOTES_VIEWER=bat
+
 # STARSHIP
 if type starship >/dev/null; then
 	eval "$(starship init zsh)"

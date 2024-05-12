@@ -37,6 +37,7 @@ return {
         "gitignore",
         "query",
         "python",
+        "gdscript",
       },
       incremental_selection = {
         enable = true,

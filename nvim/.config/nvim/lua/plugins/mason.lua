@@ -44,7 +44,6 @@ return {
         "prettier", -- generic formatter
         "shellcheck", -- shell script linter
         "shfmt", -- shell script formatter
-        "gdtoolkit", -- gdscript formatter
       },
     })
   end,

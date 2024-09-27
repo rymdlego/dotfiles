@@ -1,0 +1,3 @@
+tap "hashicorp/tap"
+brew "hashicorp/tap/terraform"
+brew "azure-cli"

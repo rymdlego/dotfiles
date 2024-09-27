@@ -39,9 +39,28 @@ if type brew &>/dev/null; then
 fi
 autoload -Uz compinit && compinit
 
+# AZURE CLI
+if type az &>/dev/null; then
+  autoload bashcompinit && bashcompinit
+  source $(brew --prefix)/etc/bash_completion.d/az
+fi
+
+# TERRAFORM
+if type terraform &>/dev/null; then
+  autoload -U +X bashcompinit && bashcompinit
+  complete -o nospace -C /opt/homebrew/bin/terraform terraform
+fi
+
+# KUBECTL
+if type kubectl &>/dev/null; then
+  source <(kubectl completion zsh)
+fi
+
+
 # SOURCE FILES
 [ -f "$HOME/.zsh/functions.sh" ] && source "$HOME/.zsh/functions.sh"
 [ -f "$HOME/.zsh/aliases.sh" ] && source "$HOME/.zsh/aliases.sh"
 [ -f "$HOME/.zsh/fzf.sh" ] && source "$HOME/.zsh/fzf.sh"
 [ -f "$HOME/.zsh/motd.sh" ] && source "$HOME/.zsh/motd.sh"
 [ -f "$HOME/.zsh/ssh-agent.sh" ] && source "$HOME/.zsh/ssh-agent.sh"
+

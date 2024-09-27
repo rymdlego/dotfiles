@@ -1,6 +1,6 @@
 palette = "catppuccin_frappe"
 
-format = '$kubernetes$git_branch$git_status$python$directory'
+format = '$azure$kubernetes$git_branch$git_status$python$directory'
 add_newline = false
 
 [palettes.catppuccin_frappe]
@@ -48,9 +48,6 @@ deleted = "x"
 
 [aws]
 symbol = "aws "
-
-[azure]
-symbol = "az "
 
 [bun]
 symbol = "bun "
@@ -262,3 +259,9 @@ disabled = false
 [kubernetes.user_aliases]
 'dev.local.cluster.k8s' = 'dev'
 'root/.*' = 'root'
+
+[azure]
+disabled = false
+format = '[($subscription)]($style) '
+symbol = '󰠅 '
+style = 'blue'

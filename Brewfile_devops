@@ -1,3 +1,5 @@
 tap "hashicorp/tap"
 brew "hashicorp/tap/terraform"
 brew "azure-cli"
+brew "podman"
+brew "podman-compose"

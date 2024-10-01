@@ -15,4 +15,4 @@ install:
 				echo "Use prefix-I in tmux to install plugins."
 
 devops:
-	      brew bundle --file Brewfile_devops
+				brew bundle --file Brewfile_devops

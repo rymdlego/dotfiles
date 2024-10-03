@@ -56,11 +56,9 @@ if type kubectl &>/dev/null; then
   source <(kubectl completion zsh)
 fi
 
-
 # SOURCE FILES
 [ -f "$HOME/.zsh/functions.sh" ] && source "$HOME/.zsh/functions.sh"
 [ -f "$HOME/.zsh/aliases.sh" ] && source "$HOME/.zsh/aliases.sh"
 [ -f "$HOME/.zsh/fzf.sh" ] && source "$HOME/.zsh/fzf.sh"
 [ -f "$HOME/.zsh/motd.sh" ] && source "$HOME/.zsh/motd.sh"
 [ -f "$HOME/.zsh/ssh-agent.sh" ] && source "$HOME/.zsh/ssh-agent.sh"
-

@@ -48,7 +48,7 @@ fi
 # TERRAFORM
 if type terraform &>/dev/null; then
   autoload -U +X bashcompinit && bashcompinit
-  complete -o nospace -C /opt/homebrew/bin/terraform terraform
+  complete -o nospace -C $(brew --prefix)/bin/terraform terraform
 fi
 
 # KUBECTL

@@ -36,3 +36,18 @@ fzf_one_or_more_files() {
     return 1 # Return non-zero status to indicate failure
   fi
 }
+
+# Azure subscription switcher
+ax() {
+  selected=$(az account list --query '[].{name:name, id:id}' -o tsv | fzf --header="Select an Azure subscription" --delimiter='\t' --with-nth=1)
+
+  if [ -n "$selected" ]; then
+    subscription_id=$(echo "$selected" | cut -f2)
+
+    az account set --subscription "$subscription_id"
+
+    echo "Switched to subscription: $subscription_id"
+  else
+    echo "No subscription selected"
+  fi
+}

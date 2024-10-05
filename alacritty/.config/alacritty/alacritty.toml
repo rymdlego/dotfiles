@@ -1,8 +1,5 @@
 import = ["~/.config/alacritty/catppuccin-frappe.toml"]
 
-[shell]
-program = "wsl"
-
 [cursor.style]
 blinking = "On"
 shape = "Block"

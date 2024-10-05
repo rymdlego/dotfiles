@@ -250,7 +250,7 @@ symbol = "zig "
 
 [kubernetes]
 #format = '[($user on )($cluster in )$context \($namespace\)](dimmed green) '
-format = '[\[$context\]](blue light) '
+format = '[\[$context\]](#B2B3FE) '
 disabled = false
 [kubernetes.context_aliases]
 'dev.local.cluster.k8s' = 'dev'
@@ -262,6 +262,4 @@ disabled = false
 
 [azure]
 disabled = false
-format = '[($subscription)]($style) '
-symbol = '󰠅 '
-style = 'blue'
+format = '[\[($subscription)\]]($style) '

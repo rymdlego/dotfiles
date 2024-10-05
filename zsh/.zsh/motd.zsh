@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 if command -v neofetch >/dev/null; then
 	# Define the output file
 	OUTPUT_FILE="/tmp/neofetch_output.txt"

@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 alias activate="source venv/bin/activate"
 alias ax="azure_subscription_switcher"
 alias c="clear"

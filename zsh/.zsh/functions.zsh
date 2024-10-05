@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 ds() {
   date +%Y%m%d
 }

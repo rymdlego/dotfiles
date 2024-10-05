@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/zsh
 
 if [ ! -S ~/.ssh/ssh_auth_sock ]; then
 	echo "'ssh-agent' has not been started since the last reboot. Starting 'ssh-agent' now."

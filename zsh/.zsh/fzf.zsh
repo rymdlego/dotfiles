@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 # Init
 if [[ ! "$PATH" == */opt/homebrew/opt/fzf/bin* ]]; then
   PATH="${PATH:+${PATH}:}/opt/homebrew/opt/fzf/bin"

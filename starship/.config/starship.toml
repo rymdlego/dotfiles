@@ -250,7 +250,7 @@ symbol = "zig "
 
 [kubernetes]
 #format = '[($user on )($cluster in )$context \($namespace\)](dimmed green) '
-format = '[\[$context\]](#B2B3FE) '
+format = '[\[$context\]](#92C3DE) '
 disabled = false
 [kubernetes.context_aliases]
 'dev.local.cluster.k8s' = 'dev'

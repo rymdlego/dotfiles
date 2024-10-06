@@ -16,3 +16,7 @@ install:
 
 devops:
 				brew bundle --file Brewfile_devops
+
+note:
+				git clone https://github.com/rymdlego/note $$HOME/dev/note
+				ln -s $$HOME/dev/note/note $$HOME/.local/bin

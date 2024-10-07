@@ -2,7 +2,7 @@ palette = "catppuccin_frappe"
 
 # format = '$azure$kubernetes$git_branch$git_status$python$directory'
 format = '$directory'
-right_format = '$azure$kubernetes$python$git_branch$git_status'
+right_format = '$azure$kubernetes$python$git_status$git_branch'
 add_newline = false
 
 [palettes.catppuccin_frappe]

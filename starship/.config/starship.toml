@@ -1,6 +1,8 @@
 palette = "catppuccin_frappe"
 
-format = '$azure$kubernetes$git_branch$git_status$python$directory'
+# format = '$azure$kubernetes$git_branch$git_status$python$directory'
+format = '$directory'
+right_format = '$azure$kubernetes$python$git_branch$git_status'
 add_newline = false
 
 [palettes.catppuccin_frappe]
@@ -45,6 +47,7 @@ behind = "<"
 diverged = "<>"
 renamed = "r"
 deleted = "x"
+format = ' ([\[$all_status$ahead_behind\]]($style))'
 
 [aws]
 symbol = "aws "
@@ -81,7 +84,7 @@ symbol = ".NET "
 
 [directory]
 read_only = " ro"
-format = '[\[$path\]](surface1) '
+format = '[\[$path\] > ](surface2)'
 
 [docker_context]
 symbol = "docker "
@@ -103,7 +106,7 @@ symbol = "gcp "
 
 [git_branch]
 symbol = "git "
-format = '[\[$branch\]](yellow) '
+format = ' [\[$branch\]](yellow)'
 
 [golang]
 symbol = "go "
@@ -213,7 +216,7 @@ symbol = "purs "
 
 [python]
 symbol = "py "
-format = '([\[$virtualenv\]](green) )'
+format = ' ([\[$virtualenv\]](green))'
 
 [raku]
 symbol = "raku "
@@ -250,7 +253,7 @@ symbol = "zig "
 
 [kubernetes]
 #format = '[($user on )($cluster in )$context \($namespace\)](dimmed green) '
-format = '[\[$context\]](#92B3DE) '
+format = ' [\[$context\]](#92B3DE)'
 disabled = false
 [kubernetes.context_aliases]
 'dev.local.cluster.k8s' = 'dev'
@@ -262,4 +265,4 @@ disabled = false
 
 [azure]
 disabled = false
-format = '[\[($subscription)\]]($style) '
+format = '[\[($subscription)\]]($style)'

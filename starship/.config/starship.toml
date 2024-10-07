@@ -1,8 +1,7 @@
 palette = "catppuccin_frappe"
 
-# format = '$azure$kubernetes$git_branch$git_status$python$directory'
-format = '$directory'
-right_format = '$azure$kubernetes$python$git_status$git_branch'
+format = '$git_branch$git_status$directory$character' 
+right_format = '$azure$kubernetes$python'
 add_newline = false
 
 [palettes.catppuccin_frappe]
@@ -34,7 +33,7 @@ mantle = "#292c3c"
 crust = "#232634"
 
 [character]
-success_symbol = "[>](bold green)"
+success_symbol = "[▶](surface2)"
 error_symbol = "[x](bold red)"
 vimcmd_symbol = "[<](bold green)"
 
@@ -47,7 +46,7 @@ behind = "<"
 diverged = "<>"
 renamed = "r"
 deleted = "x"
-format = '( [\[$all_status$ahead_behind\]]($style))'
+format = '([\[$all_status$ahead_behind\]]($style) )'
 
 [aws]
 symbol = "aws "
@@ -84,7 +83,7 @@ symbol = ".NET "
 
 [directory]
 read_only = " ro"
-format = '[\[$path\] > ](surface2)'
+format = '[\[$path\]](surface2) '
 
 [docker_context]
 symbol = "docker "
@@ -106,7 +105,7 @@ symbol = "gcp "
 
 [git_branch]
 symbol = "git "
-format = ' [\[$branch\]](yellow)'
+format = '[\[$branch\]](yellow) '
 
 [golang]
 symbol = "go "

@@ -25,3 +25,6 @@ set -g fish_greeting
 function fish_greeting
     neofetch_cached
 end
+
+# SSH Agent
+ssh-agent-setup

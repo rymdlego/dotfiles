@@ -1,7 +1,7 @@
 palette = "catppuccin_frappe"
 
 format = '$directory$character' 
-right_format = '$git_branch$git_status$kubernetes$azure$python$time'
+right_format = '$git_branch$git_status$kubernetes$azure$python'
 add_newline = false
 
 [palettes.catppuccin_frappe]

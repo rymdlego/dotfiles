@@ -1,7 +1,7 @@
 palette = "catppuccin_frappe"
 
-format = '$git_branch$git_status$directory$character' 
-right_format = '$azure$kubernetes$python'
+format = '$directory$character' 
+right_format = '$git_branch$git_status$azure$kubernetes$python$time'
 add_newline = false
 
 [palettes.catppuccin_frappe]
@@ -252,7 +252,8 @@ symbol = "zig "
 
 [kubernetes]
 #format = '[($user on )($cluster in )$context \($namespace\)](dimmed green) '
-format = ' [\[$context\]](#92B3DE)'
+# format = ' [\[$context\]](#92B3DE)'
+format = ' [\[$context\]](purple)'
 disabled = false
 [kubernetes.context_aliases]
 'dev.local.cluster.k8s' = 'dev'
@@ -264,4 +265,11 @@ disabled = false
 
 [azure]
 disabled = false
-format = '[\[($subscription)\]]($style)'
+symbol = '󰠅 '
+format = '[\[($symbol$subscription)\]]($style)'
+
+[time]
+disabled = false
+format = ' [\[$time\]](surface2)'
+time_format = '%T'
+utc_time_offset = '+2'

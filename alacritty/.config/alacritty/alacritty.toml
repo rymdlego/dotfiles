@@ -1,5 +1,8 @@
 import = ["~/.config/alacritty/catppuccin-frappe.toml"]
 
+[shell]
+program = "/opt/homebrew/bin/fish"
+
 [cursor.style]
 blinking = "On"
 shape = "Block"

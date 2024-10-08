@@ -9,7 +9,8 @@
 
 abbr c "clear"
 
+abbr gc "git commit"
 abbr gs "git status"
+abbr gp "git push"
 
-abbr vi "nvim"
-abbr vim "nvim"
+abbr p "python"

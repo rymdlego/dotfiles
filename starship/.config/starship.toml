@@ -1,7 +1,7 @@
 palette = "catppuccin_frappe"
 
 format = '$directory$character' 
-right_format = '$git_branch$git_status$azure$kubernetes$python$time'
+right_format = '$git_branch$git_status$kubernetes$azure$python$time'
 add_newline = false
 
 [palettes.catppuccin_frappe]
@@ -46,7 +46,7 @@ behind = "<"
 diverged = "<>"
 renamed = "r"
 deleted = "x"
-format = '([\[$all_status$ahead_behind\]]($style) )'
+format = '( [\[$all_status$ahead_behind\]]($style))'
 
 [aws]
 symbol = "aws "
@@ -105,7 +105,7 @@ symbol = "gcp "
 
 [git_branch]
 symbol = "git "
-format = '[\[$branch\]](yellow) '
+format = '[\[$branch\]](yellow)'
 
 [golang]
 symbol = "go "
@@ -266,7 +266,7 @@ disabled = false
 [azure]
 disabled = false
 symbol = '󰠅 '
-format = '[\[($subscription)\]]($style)'
+format = ' [\[($subscription)\]]($style)'
 
 [time]
 disabled = false

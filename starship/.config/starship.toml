@@ -266,7 +266,7 @@ disabled = false
 [azure]
 disabled = false
 symbol = '󰠅 '
-format = ' [\[($subscription)\]]($style)'
+format = ' [\[($subscription)\]](blue)'
 
 [time]
 disabled = false

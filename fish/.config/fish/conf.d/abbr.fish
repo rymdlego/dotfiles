@@ -9,7 +9,9 @@
 
 abbr c "clear"
 
+abbr ga "git add"
 abbr gc "git commit"
+abbr gd "git diff"
 abbr gs "git status"
 abbr gp "git push"
 

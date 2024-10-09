@@ -1,22 +1,19 @@
-stow:
-				stow --verbose --target=$$HOME --restow */
-
-delete:
-				stow --verbose --target=$$HOME --delete */
-
-brew:
-				brew bundle
-
 install:
-				make brew stow macos-settings
+				./macos_setup.sh
+				./brew_setup.sh
+				make brew stow
 				./fish_setup.sh
 				./tmux_setup.sh
 				bat cache --build
 
-macos-settings:
-				defaults write -g InitialKeyRepeat -int 15
-				defaults write -g KeyRepeat -int 2.0
+brew:
+				brew bundle
+
+stow:
+				stow --verbose --target=$$HOME --restow */
+
+unstow:
+				stow --verbose --target=$$HOME --delete */
 
 devops:
 				brew bundle --file Brewfile_devops
-

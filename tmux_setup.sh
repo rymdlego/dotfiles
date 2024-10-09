@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Define the plugins directory
 PLUGIN_DIR="$HOME/.config/tmux/plugins"

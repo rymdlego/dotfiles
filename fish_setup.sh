@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Find the path of fish shell
 FISH_PATH=$(which fish)

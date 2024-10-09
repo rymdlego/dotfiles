@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# only run if tmux is started
+if tmux list-sessions >/dev/null 2>&1; then
+
+  # see if any key files are already added to the ssh-agent, and if not, add them
+  if ! ssh-add -l >/dev/null; then
+    echo "No ssh keys have been added to your 'ssh-agent' since the last reboot. Adding default keys now."
+    for possiblekey in "${HOME}"/.ssh/*; do
+      # Check if the item is a directory
+      if [ -d "$possiblekey" ]; then
+        continue # Skip directories
+      fi
+      # Skip if sock file
+      # if [ "$possiblekey" = "*sock" ]; then
+      #     continue
+      # fi
+
+      case "$possiblekey" in
+      *sock*) continue ;;
+      esac
+
+      # For all private keys, set permissions and add
+      if grep -q PRIVATE "$possiblekey"; then
+        chmod 600 "$possiblekey"
+        ssh-add "$possiblekey"
+      fi
+    done
+  fi
+fi

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 if [ -z "$1" ]; then
   # No parameter provided, use fzf to select a file interactively
@@ -8,7 +8,7 @@ if [ -z "$1" ]; then
   fi
 else
   # Handle when an argument is provided
-  lines=$(fzf --filter="$1" --no-sort) # Initial filter attempt with fzf
+  lines=$(fzf --filter="$1" --no-sort)          # Initial filter attempt with fzf
   line_count="$(echo "$lines" | wc -l | xargs)" # Trim any leading spaces
 
   if [ -n "$lines" ] && [ "$line_count" -eq 1 ]; then

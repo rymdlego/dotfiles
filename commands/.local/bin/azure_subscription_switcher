@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 subscriptions=$(az account list --query '[].{name:name, id:id}' -o tsv)
 line_count=$(echo "$subscriptions" | wc -l | xargs)

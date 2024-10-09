@@ -23,28 +23,4 @@ if [[ "$(uname)" == "Darwin" ]]; then
   # Finder default view set to List
   defaults write com.apple.finder "FXPreferredViewStyle" -string "Nlsv"
 
-
-  defaults -currentHost write -g "com.apple.keyboard.modifiermapping.0-0-0" -string
-(
-        {
-        HIDKeyboardModifierMappingDst = 30064771300;
-        HIDKeyboardModifierMappingSrc = 30064771129;
-    },
-        {
-        HIDKeyboardModifierMappingDst = 30064771299;
-        HIDKeyboardModifierMappingSrc = 30064771299;
-    },
-        {
-        HIDKeyboardModifierMappingDst = 30064771303;
-        HIDKeyboardModifierMappingSrc = 30064771303;
-    },
-        {
-        HIDKeyboardModifierMappingDst = 30064771302;
-        HIDKeyboardModifierMappingSrc = 30064771302;
-    },
-        {
-        HIDKeyboardModifierMappingDst = 30064771298;
-        HIDKeyboardModifierMappingSrc = 30064771298;
-    }
-)
 fi

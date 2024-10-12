@@ -23,4 +23,7 @@ if [[ "$(uname)" == "Darwin" ]]; then
   # Finder default view set to List
   defaults write com.apple.finder "FXPreferredViewStyle" -string "Nlsv"
 
+  # Disable sound on boot
+  sudo nvram SystemAudioVolume=" "
+
 fi

@@ -15,4 +15,8 @@ abbr gd "git diff"
 abbr gs "git status"
 abbr gp "git push"
 
+abbr k "kubectl"
+
+abbr n "note"
+
 abbr p "python"

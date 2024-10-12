@@ -31,6 +31,8 @@ zoxide init fish | source # 'ajeetdsouza/zoxide'
 set -x EDITOR nvim
 set -x FZF_DEFAULT_COMMAND "fd -H -E '.git'"
 set -x BAT_THEME "Catppuccin-frappe"
+set -x NOTES_PATH "$HOME/notes"
+set -x NOTES_DAILIES "Dailies"
 
 
 # Greeting

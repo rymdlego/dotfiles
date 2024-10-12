@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Check for environment variables
 if [ -z "$NOTES_PATH" ]; then
@@ -103,6 +103,14 @@ if [ "$1" = "-f" ]; then
       exit 1
     fi
   fi
+  exit 0
+fi
+
+if [ "$1" = "git" ]; then
+  # Shift the first argument and pass the rest as git commands
+  shift
+  # Execute the git command in the notes directory
+  git -C "$NOTES_PATH" "$@"
   exit 0
 fi
 

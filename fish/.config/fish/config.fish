@@ -27,6 +27,10 @@ starship init fish | source # https://starship.rs/
 zoxide init fish | source # 'ajeetdsouza/zoxide'
 
 
+# vi-mode (hybrid mode)
+fish_hybrid_key_bindings
+
+
 # Environment variables
 set -x EDITOR nvim
 set -x FZF_DEFAULT_COMMAND "fd -H -E '.git'"
@@ -46,8 +50,6 @@ end
 # SSH Agent
 if test -z (pgrep ssh-agent | string collect)
     eval (ssh-agent -c)
-    # set -Ux SSH_AUTH_SOCK $SSH_AUTH_SOCK
-    # set -Ux SSH_AGENT_PID $SSH_AGENT_PID
     set -x SSH_AUTH_SOCK $SSH_AUTH_SOCK
     set -x SSH_AGENT_PID $SSH_AGENT_PID
 end

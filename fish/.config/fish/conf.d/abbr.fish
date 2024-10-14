@@ -8,6 +8,7 @@
 # https://fishshell.com/docs/current/cmds/abbr.html
 
 abbr c "clear"
+abbr c. "cd ..; "
 
 abbr ga "git add"
 abbr gc "git commit"

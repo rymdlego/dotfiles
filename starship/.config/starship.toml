@@ -35,7 +35,9 @@ crust = "#232634"
 [character]
 success_symbol = "[▶](surface2)"
 error_symbol = "[x](bold red)"
-vimcmd_symbol = "[<](bold green)"
+vimcmd_symbol = "[N](bold green)"
+vimcmd_replace_symbol = "[R](red)"
+vimcmd_visual_symbol = "[V](yellow)"
 
 [git_commit]
 tag_symbol = " tag "

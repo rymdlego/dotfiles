@@ -23,6 +23,5 @@ else
     fi
   else
     echo "No matches found." >&2
-    return 1 # Return non-zero status to indicate failure
   fi
 fi

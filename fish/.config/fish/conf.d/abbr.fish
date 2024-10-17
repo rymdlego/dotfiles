@@ -10,6 +10,10 @@
 abbr c "clear"
 
 abbr g "git"
+abbr gd "git diff"
+abbr gl "git log"
+abbr gp "git pull"
+abbr gs "git status"
 
 abbr k "kubectl"
 

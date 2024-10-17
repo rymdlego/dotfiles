@@ -37,7 +37,7 @@ set -x FZF_DEFAULT_COMMAND "fd -H -E '.git'"
 set -x BAT_THEME "Catppuccin-frappe"
 set -x NOTES_PATH "$HOME/notes"
 set -x NOTES_DAILIES "Dailies"
-
+set -x TERM xterm-256color
 
 # Greeting
 set -g fish_greeting

@@ -4,7 +4,7 @@ contexts=$(kubectl config get-contexts -o name)
 line_count=$(echo "$contexts" | wc -l | xargs)
 display_count=$((line_count + 5))
 
-selected=$(echo "$contexts" | fzf-tmux -p -h "$display_count" --header="Select a Kubernetes context")
+selected=$(echo "$contexts" | fzf-tmux -p -h "$display_count" --border-label=" Kubernetes Contexts ")
 
 if [ -n "$selected" ]; then
   context_name=$(echo "$selected")

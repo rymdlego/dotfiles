@@ -2,9 +2,8 @@
 
 subscriptions=$(az account list --query '[].{name:name, id:id}' -o tsv)
 line_count=$(echo "$subscriptions" | wc -l | xargs)
-display_count=$((line_count + 3))
-# selected=$(echo "$subscriptions" | fzf --height="$display_count" --header="Select an Azure subscription" --delimiter='\t' --with-nth=1)
-selected=$(echo "$subscriptions" | fzf-tmux -p --height="$display_count" --header="Select an Azure subscription" --delimiter='\t')
+display_count=$((line_count + 5))
+selected=$(echo "$subscriptions" | fzf-tmux -p -h "$display_count" --header="Select an Azure subscription" --delimiter='\t')
 
 if [ -n "$selected" ]; then
   subscription_id=$(echo "$selected" | cut -f2)

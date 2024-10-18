@@ -32,12 +32,21 @@ base = "#303446"
 mantle = "#292c3c"
 crust = "#232634"
 
+[azure]
+disabled = false
+symbol = '󰠅 '
+format = ' [\[($subscription)\]](blue)'
+
 [character]
 success_symbol = "[▶](surface2)"
 error_symbol = "[x](bold red)"
 vimcmd_symbol = "[N](bold green)"
 vimcmd_replace_symbol = "[R](red)"
 vimcmd_visual_symbol = "[V](yellow)"
+
+[directory]
+read_only = " ro"
+format = '[\[$path\]](surface2) '
 
 [git_commit]
 tag_symbol = " tag "
@@ -49,10 +58,6 @@ diverged = "<>"
 renamed = "r"
 deleted = "x"
 format = '( [\[$all_status$ahead_behind\]]($style))'
-
-[directory]
-read_only = " ro"
-format = '[\[$path\]](surface2) '
 
 [git_branch]
 symbol = "git "
@@ -74,11 +79,6 @@ disabled = false
 [kubernetes.user_aliases]
 'dev.local.cluster.k8s' = 'dev'
 'root/.*' = 'root'
-
-[azure]
-disabled = false
-symbol = '󰠅 '
-format = ' [\[($subscription)\]](blue)'
 
 [time]
 disabled = false

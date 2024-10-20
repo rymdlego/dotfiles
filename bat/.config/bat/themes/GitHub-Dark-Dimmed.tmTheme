@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plist version="1.0">
+  <dict>
+    <key>name</key>
+    <string>GitHub Dark Dimmed</string>
+    <key>settings</key>
+    <array>
+      <!-- Background and default text color -->
+      <dict>
+        <key>settings</key>
+        <dict>
+          <key>background</key>
+          <string>#22272e</string>  <!-- Dimmed background -->
+          <key>foreground</key>
+          <string>#adbac7</string>  <!-- Dimmed foreground text -->
+        </dict>
+      </dict>
+
+      <!-- Comments including # symbol -->
+      <dict>
+        <key>scope</key>
+        <string>comment, punctuation.definition.comment</string>  <!-- Includes the # as part of the comment scope -->
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#636e7b</string>  <!-- Dimmed comment color (same for # and comment text) -->
+          <key>fontStyle</key>
+          <string>italic</string>
+        </dict>
+      </dict>
+
+      <!-- Keywords -->
+      <dict>
+        <key>scope</key>
+        <string>keyword</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#f47067</string>  <!-- Bright magenta for keywords -->
+        </dict>
+      </dict>
+
+      <!-- Strings -->
+      <dict>
+        <key>scope</key>
+        <string>string</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#96d0ff</string>  <!-- Blue for strings -->
+        </dict>
+      </dict>
+
+      <!-- Functions -->
+      <dict>
+        <key>scope</key>
+        <string>entity.name.function</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#6cb6ff</string>  <!-- Slightly darker blue for functions -->
+        </dict>
+      </dict>
+
+      <!-- Numbers -->
+      <dict>
+        <key>scope</key>
+        <string>constant.numeric</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#ff938a</string>  <!-- Orange for numbers -->
+        </dict>
+      </dict>
+
+      <!-- Operators -->
+      <dict>
+        <key>scope</key>
+        <string>keyword.operator</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#adbac7</string>  <!-- Foreground color for operators -->
+        </dict>
+      </dict>
+
+      <!-- Variables -->
+      <dict>
+        <key>scope</key>
+        <string>variable</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#adbac7</string>  <!-- Foreground color for variables -->
+        </dict>
+      </dict>
+
+      <!-- Punctuation -->
+      <dict>
+        <key>scope</key>
+        <string>punctuation</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#adbac7</string>  <!-- Default color for punctuation -->
+        </dict>
+      </dict>
+    </array>
+  </dict>
+</plist>

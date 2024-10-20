@@ -8,7 +8,7 @@ unset="- Unset Context -"
 
 context=$(printf "%s\n%s" "$unset" "$contexts")
 
-selected=$(echo "$context" | fzf-tmux -p -h "$display_count" --border-label=" Kubernetes Contexts ")
+selected=$(echo "$context" | fzf-tmux -p -h "$display_count" --info hidden --border-label=" Kubernetes Contexts ")
 
 if [ -n "$selected" ]; then
   context_name=$selected

@@ -39,11 +39,15 @@ set -x NOTES_PATH "$HOME/notes"
 set -x NOTES_DAILIES "Dailies"
 set -x TERM xterm-256color
 set -x FZF_DEFAULT_OPTS "\
---color=bg+:#414559,bg:#303446,spinner:#f2d5cf,hl:#e78284 \
---color=fg:#c6d0f5,header:#e78284,info:#ca9ee6,pointer:#f2d5cf \
---color=marker:#babbf1,fg+:#c6d0f5,prompt:#ca9ee6,hl+:#e78284 \
---color=selected-bg:#51576d \
---multi"
+  --color=fg:#545d68,fg+:#636e7b,hl:#539bf5,pointer:#539bf5,bg+:#30353c,prompt:#545d68,hl+:#6cb6ff,info:#545d68 \
+  --multi"
+
+# set -x FZF_DEFAULT_OPTS "\
+# --color=bg+:#414559,bg:#303446,spinner:#f2d5cf,hl:#e78284 \
+# --color=fg:#c6d0f5,header:#e78284,info:#ca9ee6,pointer:#f2d5cf \
+# --color=marker:#babbf1,fg+:#c6d0f5,prompt:#ca9ee6,hl+:#e78284 \
+# --color=selected-bg:#51576d \
+# --multi"
 
 # Greeting
 set -g fish_greeting

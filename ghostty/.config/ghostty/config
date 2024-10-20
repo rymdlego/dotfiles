@@ -10,22 +10,37 @@ window-height = 100
 window-width = 200
 
 palette = 0=#545d68
+# Red
 palette = 1=#f47067
+# Green
 palette = 2=#57ab5a
+# Yellow
 palette = 3=#c69026
+# Blue
 palette = 4=#539bf5
+# Magenta
 palette = 5=#b083f0
+# Cyan
 palette = 6=#39c5cf
 palette = 7=#909dab
 palette = 8=#636e7b
+# Red Bright
 palette = 9=#ff938a
+# Green Bright
 palette = 10=#6bc46d
+# Yellow Bright
 palette = 11=#daaa3f
+# Blue Bright
 palette = 12=#6cb6ff
-palette = 13=#b083f0
-palette = 14=#39c5cf
+# Magenta Bright
+palette = 13=#dcbdfb
+#palette = 13=#b083f0 # Old
+# Cyan Bright
+palette = 14=#56d4dd
+#palette = 14=#39c5cf # Old
 palette = 15=#909dab
 background = 22272e
+#background = 22282f
 foreground = adbac7
 cursor-color = adbac7
 selection-background = 22272e

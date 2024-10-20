@@ -19,12 +19,12 @@ cyan = '#39c5cf'
 cyan_bright = '#56d4dd'
 white = '#909dab'
 grey = "#626880"
-panel = "#30353c"
+panel = "#2d333a"
 
 [azure]
 disabled = false
 symbol = '󰠅 '
-style = 'bg:panel fg:blue_bright'
+style = 'bg:panel fg:blue'
 # format = ' [\[($symbol$subscription)\]]($style)'
 format = "[](fg:panel)[ $symbol$subscription ]($style)[](fg:panel)"
 [azure.subscription_aliases]

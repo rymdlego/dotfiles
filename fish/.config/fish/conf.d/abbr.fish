@@ -17,6 +17,8 @@ abbr gs "git status"
 
 abbr k "kubectl"
 
+abbr la "l -la"
+
 abbr n "note"
 
 abbr p "python"

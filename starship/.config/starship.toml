@@ -1,7 +1,7 @@
 palette = "github_dark_dimmed"
 
-format = '$directory$character' 
-right_format = '$git_branch$git_status$kubernetes$azure$python'
+format = '$directory$git_status$character' 
+right_format = '$git_branch$kubernetes$azure$python'
 add_newline = true
 
 [palettes.github_dark_dimmed]
@@ -54,7 +54,8 @@ renamed = "r"
 deleted = "x"
 # format = '( [\[$all_status$ahead_behind\]]($style))'
 style = "bg:panel fg:red"
-format = "[](fg:panel)[ $all_status$ahead_behind ]($style)[](fg:panel) "
+# format = "[](fg:panel)[ $all_status$ahead_behind ]($style)[](fg:panel) "
+format = '([](fg:panel)[ $all_status$ahead_behind ]($style)[](fg:panel) )'
 
 [git_branch]
 # symbol = ' '
@@ -68,7 +69,7 @@ symbol = "py "
 format = ' ([\[$virtualenv\]](green))'
 
 [kubernetes]
-style = "bg:panel fg:blue"
+style = "bg:panel fg:magenta"
 format = "[](fg:panel)[ $symbol$context ]($style)[](fg:panel) "
 disabled = false
 [kubernetes.context_aliases]

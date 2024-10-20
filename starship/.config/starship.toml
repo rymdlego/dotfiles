@@ -2,24 +2,33 @@ palette = "github_dark_dimmed"
 
 format = '$directory$character' 
 right_format = '$git_branch$git_status$kubernetes$azure$python'
-add_newline = false
+add_newline = true
 
 [palettes.github_dark_dimmed]
-# red = '#ff938a'
 red = '#f47067'
-green = '#6bc46d'
-yellow = '#ddad43'
-blue = '#6cb6ff'
+red_bright = '#ff938a'
+green = '#57ab5a'
+green_bright = '#6bc46d'
+yellow = '#c69026'
+yellow_bright = '#ddad43'
+blue = '#539bf5'
+blue_bright = '#6cb6ff'
 magenta = '#b083f0'
+magenta_bright = '#dcbdfb'
 cyan = '#39c5cf'
+cyan_bright = '#56d4dd'
 white = '#909dab'
 grey = "#626880"
+panel = "#30353c"
 
 [azure]
 disabled = false
 symbol = '󰠅 '
-style = 'bg:panel fg:blue bold'
-format = ' [\[($symbol$subscription)\]]($style)'
+style = 'bg:panel fg:blue_bright'
+# format = ' [\[($symbol$subscription)\]]($style)'
+format = "[](fg:panel)[ $symbol$subscription ]($style)[](fg:panel)"
+[azure.subscription_aliases]
+'ai15nazsub001 (LAB - DevOps)' = 'lab-devops'
 
 [character]
 success_symbol = "[▶](grey)"
@@ -30,7 +39,9 @@ vimcmd_visual_symbol = "[V](yellow)"
 
 [directory]
 read_only = " ro"
-format = '[\[$path\]](grey) '
+# format = '[\[$path\]](grey) '
+style = 'bg:panel fg:grey'
+format = "[](fg:panel)[ $path ]($style)[](fg:panel) "
 
 [git_commit]
 tag_symbol = " tag "
@@ -41,22 +52,24 @@ behind = "<"
 diverged = "<>"
 renamed = "r"
 deleted = "x"
-style = "bg:panel fg:red bold"
-format = '( [\[$all_status$ahead_behind\]]($style))'
+# format = '( [\[$all_status$ahead_behind\]]($style))'
+style = "bg:panel fg:red"
+format = "[](fg:panel)[ $all_status$ahead_behind ]($style)[](fg:panel) "
 
 [git_branch]
-symbol = "git "
-style = "bg:panel fg:yellow bold"
-format = '[\[$branch\]]($style)'
+# symbol = ' '
+symbol = " "
+style = "bg:panel fg:yellow"
+# format = '[\[$branch\]]($style)'
+format = "[](fg:panel)[ $symbol$branch ]($style)[](fg:panel) "
 
 [python]
 symbol = "py "
 format = ' ([\[$virtualenv\]](green))'
 
 [kubernetes]
-#format = '[($user on )($cluster in )$context \($namespace\)](dimmed green) '
-# format = ' [\[$context\]](#92B3DE)'
-format = ' [\[$context\]](purple)'
+style = "bg:panel fg:blue"
+format = "[](fg:panel)[ $symbol$context ]($style)[](fg:panel) "
 disabled = false
 [kubernetes.context_aliases]
 'dev.local.cluster.k8s' = 'dev'

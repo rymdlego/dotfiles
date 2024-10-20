@@ -32,6 +32,8 @@ fish_hybrid_key_bindings
 
 
 # Environment variables
+set -x fish_color_param normal
+set -x fish_color_operator normal
 set -x EDITOR nvim
 set -x FZF_DEFAULT_COMMAND "fd -H -E '.git'"
 set -x BAT_THEME "GitHub-Dark-Dimmed"

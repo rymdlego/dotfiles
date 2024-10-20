@@ -19,9 +19,9 @@ palette = 3=#c69026
 # Blue
 palette = 4=#539bf5
 # Magenta
-palette = 5=#b083f0
+palette = 6=#b083f0
 # Cyan
-palette = 6=#39c5cf
+palette = 5=#39c5cf
 palette = 7=#909dab
 palette = 8=#636e7b
 # Red Bright

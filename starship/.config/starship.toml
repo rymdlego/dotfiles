@@ -1,7 +1,7 @@
 palette = "github_dark_dimmed"
 
-format = '$directory$git_status$character' 
-right_format = '$git_branch$python'
+format = '$directory$git_branch$git_status$character' 
+# right_format = '$git_branch$python'
 add_newline = true
 
 [palettes.github_dark_dimmed]
@@ -25,10 +25,7 @@ panel = "#2d333a"
 disabled = false
 symbol = '󰠅 '
 style = 'bg:panel fg:blue'
-# format = ' [\[($symbol$subscription)\]]($style)'
 format = "[](fg:panel)[ $symbol$subscription ]($style)[](fg:panel)"
-[azure.subscription_aliases]
-'ai15nazsub001 (LAB - DevOps)' = 'lab-devops'
 
 [character]
 success_symbol = "[▶](grey)"
@@ -39,7 +36,6 @@ vimcmd_visual_symbol = "[V](yellow)"
 
 [directory]
 read_only = " ro"
-# format = '[\[$path\]](grey) '
 style = 'bg:panel fg:grey'
 format = "[](fg:panel)[ $path ]($style)[](fg:panel) "
 
@@ -52,16 +48,13 @@ behind = "<"
 diverged = "<>"
 renamed = "r"
 deleted = "x"
-# format = '( [\[$all_status$ahead_behind\]]($style))'
 style = "bg:panel fg:red"
-# format = "[](fg:panel)[ $all_status$ahead_behind ]($style)[](fg:panel) "
 format = '([](fg:panel)[ $all_status$ahead_behind ]($style)[](fg:panel) )'
 
 [git_branch]
 # symbol = ' '
 symbol = " "
 style = "bg:panel fg:yellow"
-# format = '[\[$branch\]]($style)'
 format = "[](fg:panel)[ $symbol$branch ]($style)[](fg:panel) "
 
 [python]

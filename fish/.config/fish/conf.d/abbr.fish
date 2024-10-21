@@ -22,3 +22,5 @@ abbr la "l -la"
 abbr n "note"
 
 abbr p "python"
+
+abbr tf "terraform"

@@ -57,7 +57,9 @@ set -x FZF_DEFAULT_OPTS "\
 set -g fish_greeting
 
 function fish_greeting
-    neofetch_cached
+    echo
+    echo
+    fastfetch --logo none
 end
 
 

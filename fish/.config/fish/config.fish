@@ -41,7 +41,7 @@ set -x BAT_THEME "GitHub-Dark-Dimmed"
 set -x NOTES_PATH "$HOME/notes"
 set -x NOTES_DAILIES "Dailies"
 set -x TERM xterm-256color
-set -x FZF_DEFAULT_OPTS "\
+set -Ux FZF_DEFAULT_OPTS "\
   --color=fg:#adbac7,fg+:#bdcad7,hl:#539bf5,pointer:#539bf5 \
   --color=bg+:#30353c,prompt:#545d68,hl+:#6cb6ff,info:#545d68 \
   --multi"

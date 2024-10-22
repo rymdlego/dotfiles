@@ -57,8 +57,6 @@ set -Ux FZF_DEFAULT_OPTS "\
 set -g fish_greeting
 
 function fish_greeting
-    echo
-    echo
     fastfetch --logo none
 end
 

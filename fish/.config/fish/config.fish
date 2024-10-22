@@ -12,6 +12,11 @@
 set -x PATH $HOME/.local/bin $PATH
 
 
+# Golang
+set -x PATH $HOME/go/bin $PATH
+set -x GOPATH $HOME/go
+
+
 # Homebrew
 set linuxbrew_path "/home/linuxbrew/.linuxbrew/bin"
 

@@ -27,6 +27,13 @@ keymap.set("n", "<leader>qa", "<cmd>qa<CR>", { desc = "Quit all buffers" })
 keymap.set("n", "<leader>wa", "<cmd>wa<CR>", { desc = "Save all buffers" })
 keymap.set("n", "<leader>xa", "<cmd>xa<CR>", { desc = "Save and quit all buffers" })
 
+-- md preview
 keymap.set("n", "<leader>gl", "<cmd>Glow<CR>", { desc = "Preview md file with Glow" })
 
+-- x to delete but don't stick in copy buffer
 keymap.set("n", "x", '"_x', { desc = "Delete to black hole register" })
+
+-- git
+keymap.set("n", "<leader>ga", "<cmd>Git add %<CR>", { desc = "Git add this file" })
+keymap.set("n", "<leader>gc", "<cmd>Git commit<CR>", { desc = "Git commit" })
+keymap.set("n", "<leader>gp", "<cmd>Git pull<CR>", { desc = "Git pull from repo" })

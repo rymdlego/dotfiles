@@ -18,15 +18,6 @@ if [ -z "$NOTES_VIEWER" ]; then
   NOTES_VIEWER='cat'
 fi
 
-# Check if $EDITOR is set to nvim
-# if [ "$EDITOR" = "nvim" ]; then
-#   NOTES_EDITOR="nvim -c 'cd $NOTES_PATH/' "
-#   # "${NOTES_EDITOR:-vim}" "$daily_note" -c "cd ${NOTES_PATH}"
-#   echo $NOTES_EDITOR
-# else
-#   NOTES_EDITOR="$EDITOR"
-# fi
-
 # Check if argument is a search flag
 if [ "$1" = "-s" ]; then
   # Check if any keywords are given

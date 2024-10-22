@@ -10,6 +10,7 @@
 alias ax "azure_subscription_switcher"
 alias kx "kubernetes_context_switcher"
 alias l "eza --color=always --git --no-filesize --icons --no-time --no-user --no-permissions"
+alias la "l -la"
 # alias ls "eza --icons"
 alias python "python3"
 alias t "sesh connect"

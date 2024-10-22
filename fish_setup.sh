@@ -1,5 +1,12 @@
 #!/bin/bash
 
+if command -v fish >/dev/null; then
+  echo "Fish shell installed. God is good."
+else
+  echo "Couldn't find Fish shell. Exiting."
+  exit
+fi
+
 # Find the path of fish shell
 FISH_PATH=$(which fish)
 

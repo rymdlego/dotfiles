@@ -20,7 +20,9 @@ abbr k "kubectl"
 abbr la "l -la"
 
 abbr n "note"
+abbr ng "note git"
 
-abbr p "python"
+abbr p "pass"
+abbr pg "pass git"
 
 abbr tf "terraform"

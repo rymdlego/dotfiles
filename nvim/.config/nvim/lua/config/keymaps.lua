@@ -36,4 +36,6 @@ keymap.set("n", "x", '"_x', { desc = "Delete to black hole register" })
 -- git
 keymap.set("n", "<leader>ga", "<cmd>Git add %<CR>", { desc = "Git add this file" })
 keymap.set("n", "<leader>gc", "<cmd>Git commit<CR>", { desc = "Git commit" })
+keymap.set("n", "<leader>gd", "<cmd>Git diff<CR>", { desc = "Git diff" })
 keymap.set("n", "<leader>gp", "<cmd>Git pull<CR>", { desc = "Git pull from repo" })
+keymap.set("n", "<leader>gs", "<cmd>Git status<CR>", { desc = "Git status" })

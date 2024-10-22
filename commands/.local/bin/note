@@ -18,6 +18,15 @@ if [ -z "$NOTES_VIEWER" ]; then
   NOTES_VIEWER='cat'
 fi
 
+# Check if $EDITOR is set to nvim
+# if [ "$EDITOR" = "nvim" ]; then
+#   NOTES_EDITOR="nvim -c 'cd $NOTES_PATH/' "
+#   # "${NOTES_EDITOR:-vim}" "$daily_note" -c "cd ${NOTES_PATH}"
+#   echo $NOTES_EDITOR
+# else
+#   NOTES_EDITOR="$EDITOR"
+# fi
+
 # Check if argument is a search flag
 if [ "$1" = "-s" ]; then
   # Check if any keywords are given
@@ -93,11 +102,15 @@ if [ "$1" = "-f" ]; then
     fi
 
     # Open the file with the default editor
-    "${EDITOR:-vim}" "$file_name"
+    "${EDITOR:-vim}" "$file_name" -c "cd ${NOTES_PATH}"
+
   else
     # When -f flag is given with no arguments, perform a fzf search if fzf is installed
     if command -v fzf >/dev/null 2>&1; then
-      "${EDITOR:-vim}" "$(find "$NOTES_PATH" -type f -name "*.md" | fzf)"
+      cd "$NOTES_PATH" || exit
+      vim_opener
+      cd -
+      # "${EDITOR:-vim}" -c "cd ${NOTES_PATH}" "$(find "$NOTES_PATH" -type f -name "*.md" | fzf)"
     else
       echo "ERROR: No note specified."
       exit 1
@@ -128,7 +141,8 @@ fi
 # Check if any arguments are given
 if [ "$#" -eq 0 ]; then
   # Open the file with the default editor
-  "${EDITOR:-vim}" "$daily_note"
+  "${EDITOR:-vim}" "$daily_note" -c "cd ${NOTES_PATH}"
+
 else
   # Write each argument to the daily note
   echo "$NOTES_PREFIX$*" >>"$daily_note"

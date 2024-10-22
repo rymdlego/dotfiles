@@ -2,7 +2,7 @@
 
 if [ -z "$1" ]; then
   # No parameter provided, use fzf to select a file interactively
-  file="$(fd --type f --hidden --exclude .git | fzf-tmux -p -w 80% -h 60% --preview='bat --style=plain --color=always {}')"
+  file="$(fd --type f --hidden --exclude .git --exclude .git-crypt | fzf-tmux -p -w 80% -h 60% --preview='bat --style=plain --color=always {}')"
   if [ -n "$file" ]; then
     nvim "$file"
   fi

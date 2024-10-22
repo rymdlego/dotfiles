@@ -54,7 +54,7 @@ format = '([](fg:panel)[ $all_status$ahead_behind ]($style)[](fg:panel) )'
 [git_branch]
 # symbol = ' '
 symbol = " "
-style = "bg:panel fg:yellow"
+style = "bg:panel fg:yellow_bright"
 format = "[](fg:panel)[ $symbol$branch ]($style)[](fg:panel) "
 
 [python]

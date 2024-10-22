@@ -36,11 +36,11 @@ set -x fish_color_param normal
 set -x fish_color_operator normal
 set -x EZA_COLORS bu=0:ex=31:\*.\*=0:uu=0:gu=0:ur=0:uw=0:ux=0:ue=0:gr=0:gw=0:gx=0:tr=0:tw=0:tx=0:da=0:sn=0
 set -x EDITOR nvim
-set -x FZF_DEFAULT_COMMAND "fd -H -E '.git'"
 set -x BAT_THEME "GitHub-Dark-Dimmed"
 set -x NOTES_PATH "$HOME/notes"
 set -x NOTES_DAILIES "Dailies"
 set -x TERM xterm-256color
+set -Ux FZF_DEFAULT_COMMAND "fd -H -E '.git'"
 set -Ux FZF_DEFAULT_OPTS "\
   --color=fg:#adbac7,fg+:#bdcad7,hl:#539bf5,pointer:#539bf5 \
   --color=bg+:#30353c,prompt:#545d68,hl+:#6cb6ff,info:#545d68 \

@@ -1,5 +1,4 @@
 install:
-				./macos_setup.sh
 				./brew_setup.sh
 				make brew stow
 				./fish_setup.sh

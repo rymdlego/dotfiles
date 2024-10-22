@@ -8,6 +8,7 @@
 # https://fishshell.com/docs/current/cmds/alias.html
 
 alias ax "azure_subscription_switcher"
+alias cat "bat -p"
 alias kx "kubernetes_context_switcher"
 alias l "eza --color=always --git --no-filesize --icons --no-time --no-user --no-permissions"
 alias la "l -la"

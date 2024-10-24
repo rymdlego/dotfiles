@@ -43,7 +43,6 @@ set -x EZA_COLORS bu=0:ex=31:\*.\*=0:uu=0:gu=0:ur=0:uw=0:ux=0:ue=0:gr=0:gw=0:gx=
 set -x EDITOR nvim
 set -x BAT_THEME "GitHub-Dark-Dimmed"
 set -x NOTES_PATH "$HOME/notes"
-set -x NOTES_DAILIES "Dailies"
 set -x TERM xterm-256color
 set -Ux FZF_DEFAULT_COMMAND "fd -H -E '.git'"
 set -Ux FZF_DEFAULT_OPTS "\
@@ -51,12 +50,6 @@ set -Ux FZF_DEFAULT_OPTS "\
   --color=bg+:#30353c,prompt:#545d68,hl+:#6cb6ff,info:#545d68 \
   --multi"
 
-# set -x FZF_DEFAULT_OPTS "\
-# --color=bg+:#414559,bg:#303446,spinner:#f2d5cf,hl:#e78284 \
-# --color=fg:#c6d0f5,header:#e78284,info:#ca9ee6,pointer:#f2d5cf \
-# --color=marker:#babbf1,fg+:#c6d0f5,prompt:#ca9ee6,hl+:#e78284 \
-# --color=selected-bg:#51576d \
-# --multi"
 
 # Greeting
 set -g fish_greeting

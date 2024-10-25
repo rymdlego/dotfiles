@@ -1,3 +1,4 @@
 *lock.json
 tmux/.config/tmux/plugins/
 fish/.config/fish/fish_variables
+gp.lua

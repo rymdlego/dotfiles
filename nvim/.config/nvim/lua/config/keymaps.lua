@@ -39,3 +39,6 @@ keymap.set("n", "<leader>gc", "<cmd>Git commit<CR>", { desc = "Git commit" })
 keymap.set("n", "<leader>gd", "<cmd>Git diff<CR>", { desc = "Git diff" })
 keymap.set("n", "<leader>gp", "<cmd>Git pull<CR>", { desc = "Git pull from repo" })
 keymap.set("n", "<leader>gs", "<cmd>Git status<CR>", { desc = "Git status" })
+
+-- lazy
+keymap.set("n", "<leader>ll", "<cmd>Lazy update<CR>", { desc = "Lazy update" })

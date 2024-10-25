@@ -1,5 +1,9 @@
 ## My dotfiles for MacOS and Linux
 
+I'm updating this all the time... :)
+
+This is what I use and keep my computers in sync with similar config.
+
 To install everything, just run:
 
 `make install` will install Homebrew (and Xcode if MacOS), Brewfile packages, stow dotfiles into place, and some additional post commands.

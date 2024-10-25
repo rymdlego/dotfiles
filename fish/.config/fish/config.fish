@@ -28,8 +28,15 @@ end
 
 
 # Setup
-starship init fish | source # https://starship.rs/
-zoxide init fish | source # 'ajeetdsouza/zoxide'
+if type -q starship
+    starship init fish | source # https://starship.rs/
+end
+if type -q zoxide
+    zoxide init fish | source # 'ajeetdsouza/zoxide'
+end
+if type -q note
+    note completion fish | source # 'rymdlego/note'
+end
 
 
 # vi-mode (hybrid mode)

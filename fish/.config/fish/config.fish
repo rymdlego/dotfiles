@@ -52,6 +52,7 @@ set -x BAT_THEME "GitHub-Dark-Dimmed"
 set -x NOTES_PATH "$HOME/notes"
 set -x NOTES_VIEWER glow
 set -x TERM xterm-256color
+set -x XDG_CONFIG_HOME "$HOME/.config"
 set -Ux FZF_DEFAULT_COMMAND "fd -H -E '.git'"
 set -Ux FZF_DEFAULT_OPTS "\
   --color=fg:#adbac7,fg+:#bdcad7,hl:#539bf5,pointer:#539bf5 \

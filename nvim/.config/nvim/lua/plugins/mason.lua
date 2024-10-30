@@ -43,6 +43,7 @@ return {
         "pylint", -- python linter
         "yamlfmt", -- yaml formatter
         "yamllint", -- yaml linter
+        "tflint", -- terraform linter
         "prettier", -- generic formatter
         "shellcheck", -- shell script linter
         "shfmt", -- shell script formatter

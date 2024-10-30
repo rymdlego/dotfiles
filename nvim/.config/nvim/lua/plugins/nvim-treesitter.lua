@@ -34,6 +34,7 @@ return {
         "lua",
         "vim",
         "terraform",
+        "hcl",
         "dockerfile",
         "gitignore",
         "query",

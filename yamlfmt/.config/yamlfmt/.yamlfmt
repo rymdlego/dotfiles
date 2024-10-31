@@ -1,3 +1,5 @@
+exclude:
+  - "**/templates/*.yaml"
 formatter:
   eof_newline: false
   type: basic

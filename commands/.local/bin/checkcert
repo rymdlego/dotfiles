@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Check if a URL is provided
+if [ $# -ne 1 ]; then
+    echo "Usage: checkcert <https://example.com[:port]>"
+    exit 1
+fi
+
+# Extract hostname and port from the URL
+url="$1"
+site=$(echo "$url" | sed -E 's|https://([^:/]+).*|\1|')
+port=$(echo "$url" | sed -E 's|.*:([0-9]+)$|\1|')
+
+# Default to port 443 if no port is specified
+if [[ "$port" == "$url" ]]; then
+    port=443
+fi
+
+# Check if site is empty to avoid malformed openssl commands
+if [ -z "$site" ]; then
+    echo "Error: Unable to parse the hostname from the URL."
+    exit 1
+fi
+
+# Run the openssl command to check the certificate
+openssl s_client -connect "$site:$port" -servername "$site" </dev/null 2>/dev/null | openssl x509 -noout -dates -subject -issuer

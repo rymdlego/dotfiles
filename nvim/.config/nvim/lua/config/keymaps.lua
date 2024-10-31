@@ -42,3 +42,6 @@ keymap.set("n", "<leader>gs", "<cmd>Git status<CR>", { desc = "Git status" })
 
 -- lazy
 keymap.set("n", "<leader>ll", "<cmd>Lazy update<CR>", { desc = "Lazy update" })
+
+-- LSP
+keymap.set("n", "<leader>ls", "<cmd>LspStop<CR>", { desc = "Lazy update" })

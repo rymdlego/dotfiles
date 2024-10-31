@@ -1,5 +1,5 @@
 formatter:
+  eof_newline: false
   type: basic
   include_document_start: true
   max_line_length: 80
-  eof_newline: false

@@ -68,12 +68,11 @@ function fish_greeting
     fastfetch --logo none
 end
 
-
-# SSH Agent
-if test -z (pgrep ssh-agent | string collect)
+# ssh-agent
+if not pgrep ssh-agent
     eval (ssh-agent -c)
-    set -x SSH_AUTH_SOCK $SSH_AUTH_SOCK
-    set -x SSH_AGENT_PID $SSH_AGENT_PID
+    set -Ux SSH_AUTH_SOCK $SSH_AUTH_SOCK
+    set -Ux SSH_AGENT_PID $SSH_AGENT_PID
 end
 
 ssh-keys-add

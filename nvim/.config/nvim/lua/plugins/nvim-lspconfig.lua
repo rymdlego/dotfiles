@@ -3,6 +3,7 @@ return {
   event = { "BufReadPre", "BufNewFile" },
   dependencies = {
     "hrsh7th/cmp-nvim-lsp",
+    "b0o/schemastore.nvim",
     { "antosha417/nvim-lsp-file-operations", config = true },
     { "folke/neodev.nvim", opts = {} },
   },
@@ -27,6 +28,86 @@ return {
         },
       },
     })
+
+    lspconfig.lua_ls.setup({
+      on_init = function(client)
+        if client.workspace_folders then
+          local path = client.workspace_folders[1].name
+          if vim.uv.fs_stat(path .. "/.luarc.json") or vim.uv.fs_stat(path .. "/.luarc.jsonc") then
+            return
+          end
+        end
+
+        client.config.settings.Lua = vim.tbl_deep_extend("force", client.config.settings.Lua, {
+          runtime = {
+            -- Tell the language server which version of Lua you're using
+            -- (most likely LuaJIT in the case of Neovim)
+            version = "LuaJIT",
+          },
+          -- Make the server aware of Neovim runtime files
+          workspace = {
+            checkThirdParty = false,
+            library = {
+              vim.env.VIMRUNTIME,
+              -- Depending on the usage, you might want to add additional paths here.
+              -- "${3rd}/luv/library"
+              -- "${3rd}/busted/library",
+            },
+            -- or pull in all of 'runtimepath'. NOTE: this is a lot slower and will cause issues when working on your own configuration (see https://github.com/neovim/nvim-lspconfig/issues/3189)
+            -- library = vim.api.nvim_get_runtime_file("", true)
+          },
+        })
+      end,
+      settings = {
+        Lua = {},
+      },
+    })
+
+    -- lspconfig.yamlls.setup({
+    --   on_attach = function(client, bufnr)
+    --     client.server_capabilities.documentFormattingProvider = true -- I add this line
+    --     on_attach(client, bufnr)
+    --   end,
+    --   flags = lsp_flags,
+    --   capabilities = capabilities,
+    --   settings = {
+    --     yaml = {
+    --       format = {
+    --         enable = true,
+    --       },
+    --       schemaStore = {
+    --         enable = true,
+    --       },
+    --     },
+    --   },
+    -- })
+
+    require("lspconfig").yamlls.setup({
+      settings = {
+        yaml = {
+          schemaStore = {
+            -- You must disable built-in schemaStore support if you want to use
+            -- this plugin and its advanced options like `ignore`.
+            enable = false,
+            -- Avoid TypeError: Cannot read properties of undefined (reading 'length')
+            url = "",
+          },
+          schemas = require("schemastore").yaml.schemas(),
+        },
+      },
+    })
+    -- lspconfig.yamlls.setup({
+    --   settings = {
+    --     yaml = {
+    --       schemas = {
+    --         ["https://json.schemastore.org/github-workflow.json"] = "/.github/workflows/*",
+    --         ["../path/relative/to/file.yml"] = "/.github/workflows/*",
+    --         ["/path/from/root/of/project"] = "/.github/workflows/*",
+    --         ["https://raw.githubusercontent.com/instrumenta/kubernetes-json-schema/master/v1.18.0-standalone-strict/all.json"] = "/*.k8s.yaml",
+    --       },
+    --     },
+    --   },
+    -- })
 
     -- import mason_lspconfig plugin
     local mason_lspconfig = require("mason-lspconfig")

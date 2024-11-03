@@ -29,8 +29,8 @@ return {
       ensure_installed = {
         "gopls",
         "lua_ls",
-        "pyright",
-        "terraformls",
+        -- "pyright",
+        -- "terraformls",
         "yamlls",
       },
     })
@@ -38,15 +38,15 @@ return {
     mason_tool_installer.setup({
       ensure_installed = {
         "stylua", -- lua formatter
-        "isort", -- python formatter
-        "black", -- python formatter
-        "pylint", -- python linter
-        "yamlfmt", -- yaml formatter
-        "yamllint", -- yaml linter
-        "tflint", -- terraform linter
-        "prettier", -- generic formatter
-        "shellcheck", -- shell script linter
-        "shfmt", -- shell script formatter
+        -- "isort", -- python formatter
+        -- "black", -- python formatter
+        -- "pylint", -- python linter
+        -- "yamlfmt", -- yaml formatter
+        -- "yamllint", -- yaml linter
+        -- "tflint", -- terraform linter
+        -- "prettier", -- generic formatter
+        -- "shellcheck", -- shell script linter
+        -- "shfmt", -- shell script formatter
       },
     })
   end,

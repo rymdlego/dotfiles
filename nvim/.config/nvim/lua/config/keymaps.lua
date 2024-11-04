@@ -1,4 +1,5 @@
 vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 local keymap = vim.keymap
 
@@ -12,7 +13,7 @@ keymap.set("n", "<leader>sj", "<C-w>s", { desc = "Split window horizontally" }) 
 keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" }) -- make split windows equal width & height
 keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" }) -- close current split window
 
--- tabs
+-- tabs (I don't use them...)
 -- keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" }) -- open new tab
 -- keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" }) -- close current tab
 -- keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  go to next tab
@@ -27,21 +28,18 @@ keymap.set("n", "<leader>qa", "<cmd>qa<CR>", { desc = "Quit all buffers" })
 keymap.set("n", "<leader>wa", "<cmd>wa<CR>", { desc = "Save all buffers" })
 keymap.set("n", "<leader>xa", "<cmd>xa<CR>", { desc = "Save and quit all buffers" })
 
--- md preview
-keymap.set("n", "<leader>gl", "<cmd>Glow<CR>", { desc = "Preview md file with Glow" })
-
 -- x to delete but don't stick in copy buffer
 keymap.set("n", "x", '"_x', { desc = "Delete to black hole register" })
 
--- git
-keymap.set("n", "<leader>ga", "<cmd>Git add %<CR>", { desc = "Git add this file" })
-keymap.set("n", "<leader>gc", "<cmd>Git commit<CR>", { desc = "Git commit" })
-keymap.set("n", "<leader>gd", "<cmd>Git diff<CR>", { desc = "Git diff" })
-keymap.set("n", "<leader>gp", "<cmd>Git pull<CR>", { desc = "Git pull from repo" })
-keymap.set("n", "<leader>gs", "<cmd>Git status<CR>", { desc = "Git status" })
+-- -- git
+-- keymap.set("n", "<leader>ga", "<cmd>Git add %<CR>", { desc = "Git add this file" })
+-- keymap.set("n", "<leader>gc", "<cmd>Git commit<CR>", { desc = "Git commit" })
+-- keymap.set("n", "<leader>gd", "<cmd>Git diff<CR>", { desc = "Git diff" })
+-- keymap.set("n", "<leader>gp", "<cmd>Git pull<CR>", { desc = "Git pull from repo" })
+-- keymap.set("n", "<leader>gs", "<cmd>Git status<CR>", { desc = "Git status" })
 
 -- lazy
-keymap.set("n", "<leader>ll", "<cmd>Lazy update<CR>", { desc = "Lazy update" })
+-- keymap.set("n", "<leader>ll", "<cmd>Lazy update<CR>", { desc = "Lazy update" })
 
--- LSP
-keymap.set("n", "<leader>ls", "<cmd>LspStop<CR>", { desc = "Lazy update" })
+-- toggle line wrap
+keymap.set("n", "<leader>lw", "<cmd>set wrap!<CR>", { desc = "Toggle line wrap" })

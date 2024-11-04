@@ -35,6 +35,7 @@ return {
         "vim",
         "terraform",
         "hcl",
+        "go",
         "dockerfile",
         "gitignore",
         "query",

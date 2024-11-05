@@ -63,25 +63,6 @@ return {
       },
     })
 
-    -- lspconfig.yamlls.setup({
-    --   on_attach = function(client, bufnr)
-    --     client.server_capabilities.documentFormattingProvider = true -- I add this line
-    --     on_attach(client, bufnr)
-    --   end,
-    --   flags = lsp_flags,
-    --   capabilities = capabilities,
-    --   settings = {
-    --     yaml = {
-    --       format = {
-    --         enable = true,
-    --       },
-    --       schemaStore = {
-    --         enable = true,
-    --       },
-    --     },
-    --   },
-    -- })
-
     require("lspconfig").yamlls.setup({
       settings = {
         yaml = {
@@ -96,18 +77,17 @@ return {
         },
       },
     })
-    -- lspconfig.yamlls.setup({
-    --   settings = {
-    --     yaml = {
-    --       schemas = {
-    --         ["https://json.schemastore.org/github-workflow.json"] = "/.github/workflows/*",
-    --         ["../path/relative/to/file.yml"] = "/.github/workflows/*",
-    --         ["/path/from/root/of/project"] = "/.github/workflows/*",
-    --         ["https://raw.githubusercontent.com/instrumenta/kubernetes-json-schema/master/v1.18.0-standalone-strict/all.json"] = "/*.k8s.yaml",
-    --       },
-    --     },
-    --   },
-    -- })
+
+    require("lspconfig").pyright.setup({})
+
+    require("lspconfig").terraformls.setup({
+      init_options = {
+        terraform = {
+          path = "/home/linuxbrew/.linuxbrew/bin/terraform",
+          -- path = "/opt/homebrew/bin/terraform",
+        },
+      },
+    })
 
     -- import mason_lspconfig plugin
     local mason_lspconfig = require("mason-lspconfig")

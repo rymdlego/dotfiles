@@ -39,10 +39,10 @@ return {
       ensure_installed = {
         "stylua", -- lua formatter
         "yamlfmt", -- yaml formatter
-        -- "isort", -- python formatter
-        -- "black", -- python formatter
-        -- "shfmt", -- shell script formatter
-        -- "prettier", -- generic formatter
+        "isort", -- python formatter
+        "black", -- python formatter
+        "shfmt", -- shell script formatter
+        "prettier", -- generic formatter
         "pylint", -- python linter
         "yamllint", -- yaml linter
         "tflint", -- terraform linter

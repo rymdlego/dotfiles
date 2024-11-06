@@ -65,6 +65,11 @@ fish_hybrid_key_bindings
 set -gx ATUIN_NOBIND "true"
 atuin init fish | source
 
+
+# Direnv
+direnv hook fish | source
+
+
 # bind to ctrl-r in normal and insert mode, add any other bindings you want here too
 bind \cr _atuin_search
 bind \ct '_atuin_search --filter-mode directory'

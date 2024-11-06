@@ -1,5 +1,6 @@
 tap "homebrew/bundle"
 tap "joshmedeski/sesh"
+brew "atuin"
 brew "bat"
 brew "eza"
 brew "fastfetch"

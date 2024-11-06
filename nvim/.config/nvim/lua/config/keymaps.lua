@@ -3,8 +3,6 @@ vim.g.maplocalleader = " "
 
 local keymap = vim.keymap
 
-keymap.set("i", "<C-l>", "<ESC>", { desc = "Exit insert mode with Ctrl-l" })
-
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 
 -- splits

@@ -20,6 +20,7 @@ keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" }
 
 -- save and exit
 keymap.set("n", "<leader>qq", "<cmd>q<CR>", { desc = "Quit buffer" })
+keymap.set("n", "<S-x>X", "<cmd>q<CR>", { desc = "Quit buffer" })
 keymap.set("n", "<leader>xx", "<cmd>x<CR>", { desc = "Save and quit buffer" })
 keymap.set("n", "<leader>ww", "<cmd>w<CR>", { desc = "Save buffer" })
 keymap.set("n", "<leader>qa", "<cmd>qa<CR>", { desc = "Quit all buffers" })

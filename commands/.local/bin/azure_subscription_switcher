@@ -1,9 +1,32 @@
 #!/bin/bash
 
+# Get the list of subscriptions
 subscriptions=$(az account list --query '[].{name:name, id:id}' -o tsv)
+
+# Check if a search term is provided
+if [ -n "$1" ]; then
+  search_term=$1
+  # Filter subscriptions based on the search term
+  subscriptions=$(echo "$subscriptions" | grep -i "$search_term")
+
+  # Check if any subscriptions match the search term
+  if [ -z "$subscriptions" ]; then
+    echo "No subscriptions found matching \"$search_term\""
+    exit 1
+  fi
+fi
+
+# Count the number of matching subscriptions
 line_count=$(echo "$subscriptions" | wc -l | xargs)
-display_count=$((line_count + 5))
-selected=$(echo "$subscriptions" | fzf-tmux -p -h "$display_count" --info hidden --border-label=" Azure Subscriptions " --delimiter='\t')
+
+if [ "$line_count" -eq 1 ]; then
+  # If there's only one match, select it automatically
+  selected=$subscriptions
+else
+  # Display the subscriptions using fzf
+  display_count=$((line_count + 5))
+  selected=$(echo "$subscriptions" | fzf-tmux -p -h "$display_count" --info hidden --border-label=" Azure Subscriptions " --delimiter='\t')
+fi
 
 if [ -n "$selected" ]; then
   subscription_id=$(echo "$selected" | cut -f2)

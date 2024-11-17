@@ -19,7 +19,7 @@ require("lazy").setup({
     -- version = false, -- always use the latest git commit
   },
   -- install = { colorscheme = { "catppuccin-frappe" } },
-  checker = { enabled = true, frequency = 86400, notify = true },
+  checker = { enabled = true, frequency = 604800, notify = true },
   -- checker = { enabled = true }, -- automatically check for plugin updates
   performance = {
     rtp = {

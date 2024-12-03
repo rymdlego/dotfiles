@@ -1,4 +1,4 @@
-custom-shader = "./cubes.glsl"
+#custom-shader = "./cubes.glsl"
 
 clipboard-read = "allow"
 cursor-style = block

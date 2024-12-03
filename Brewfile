@@ -1,6 +1,5 @@
 tap "homebrew/bundle"
 tap "joshmedeski/sesh"
-brew "atuin"
 brew "bat"
 brew "direnv"
 brew "eza"

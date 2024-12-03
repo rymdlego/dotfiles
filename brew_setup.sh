@@ -5,3 +5,9 @@ if command -v brew &>/dev/null; then
 else
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
+
+if test -d $linuxbrew_path
+    eval ($linuxbrew_path/brew shellenv)
+else
+    eval (/opt/homebrew/bin/brew shellenv)
+end

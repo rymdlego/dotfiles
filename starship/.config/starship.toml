@@ -36,8 +36,10 @@ vimcmd_visual_symbol = "[V](yellow)"
 
 [directory]
 read_only = " ro"
-style = 'bg:panel fg:grey'
-format = "[](fg:panel)[ $path ]($style)[](fg:panel) "
+# style = 'bg:panel fg:grey'
+style = 'fg:grey'
+# format = "[](fg:panel)[ $path ]($style)[](fg:panel) "
+format = "[$path]($style) "
 
 [git_commit]
 tag_symbol = " tag "
@@ -48,14 +50,17 @@ behind = "<"
 diverged = "<>"
 renamed = "r"
 deleted = "x"
-style = "bg:panel fg:red"
-format = '([](fg:panel)[ $all_status$ahead_behind ]($style)[](fg:panel) )'
+# style = "bg:panel fg:red"
+style = "fg:red"
+format = "([$all_status$ahead_behind]($style) )"
 
 [git_branch]
 # symbol = ' '
 symbol = " "
-style = "bg:panel fg:yellow_bright"
-format = "[](fg:panel)[ $symbol$branch ]($style)[](fg:panel) "
+# style = "bg:panel fg:yellow_bright"
+style = "fg:yellow_bright"
+# format = "[](fg:panel)[ $symbol$branch ]($style)[](fg:panel) "
+format = "[ $symbol$branch]($style) "
 
 [python]
 symbol = "py "

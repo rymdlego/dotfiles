@@ -1,12 +1,12 @@
 # custom-shader = "./cubes.glsl"
-background-opacity = 0.95
-background-blur-radius = 50
+# background-opacity = 0.90
+# background-blur-radius = 50
 
 macos-titlebar-style = "hidden"
 clipboard-read = "allow"
 cursor-style = block
 font-family = "JetBrainsMono Nerd Font Mono"
-font-size = 16
+font-size = 18
 fullscreen = false
 mouse-hide-while-typing = false
 window-decoration = true

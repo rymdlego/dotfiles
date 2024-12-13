@@ -18,6 +18,7 @@ abbr gs "git status"
 abbr gcm "git commit -m"
 
 abbr k "kubectl"
+abbr ks "k9s"
 
 abbr n "note"
 abbr ng "note git"

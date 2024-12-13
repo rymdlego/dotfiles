@@ -84,8 +84,8 @@ return {
     require("lspconfig").terraformls.setup({
       init_options = {
         terraform = {
-          path = "/home/linuxbrew/.linuxbrew/bin/terraform",
-          -- path = "/opt/homebrew/bin/terraform",
+          -- path = "/home/linuxbrew/.linuxbrew/bin/terraform",
+          path = "/opt/homebrew/bin/terraform",
         },
       },
     })

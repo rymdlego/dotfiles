@@ -2,6 +2,7 @@ return {
   "stevearc/oil.nvim",
   opts = {},
   dependencies = { "nvim-tree/nvim-web-devicons" },
+  cmd = "Oil",
   config = function()
     require("oil").setup({
       -- Oil will take over directory buffers (e.g. `vim .` or `:e src/`)
@@ -186,9 +187,9 @@ return {
     })
 
     -- set keymaps
-    local keymap = vim.keymap
-
-    keymap.set("n", "<leader>o", "<cmd>Oil<cr>", { desc = "Open up Oil" })
-    keymap.set("n", "<leader>fo", "<cmd>Oil --float<cr>", { desc = "Open up Oil in floating window" })
+    -- local keymap = vim.keymap
+    --
+    -- keymap.set("n", "<leader>o", "<cmd>Oil<cr>", { desc = "Open up Oil" })
+    -- keymap.set("n", "<leader>fo", "<cmd>Oil --float<cr>", { desc = "Open up Oil in floating window" })
   end,
 }

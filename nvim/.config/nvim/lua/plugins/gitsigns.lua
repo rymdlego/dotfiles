@@ -1,5 +1,6 @@
 return {
   "lewis6991/gitsigns.nvim",
+  event = "BufReadPre", -- Load before buffer read
   config = function()
     require("gitsigns").setup({
       on_attach = function(bufnr)

@@ -44,3 +44,25 @@ keymap.set("n", "<s-L>L", "<cmd>Lazy update<CR>", { desc = "Lazy update" })
 
 -- toggle line wrap
 keymap.set("n", "<leader>lw", "<cmd>set wrap!<CR>", { desc = "Toggle line wrap" })
+
+-- Oil
+keymap.set("n", "<leader>o", "<cmd>Oil<cr>", { desc = "Open up Oil" })
+keymap.set("n", "<leader>fo", "<cmd>Oil --float<cr>", { desc = "Open up Oil in floating window" })
+
+-- ZenMode
+keymap.set("n", "<leader>z", "<cmd>ZenMode<cr>", { desc = "Open up ZenMode" })
+
+-- ReadTime
+keymap.set("n", "<leader>rt", "<cmd>ReadTime<cr>", { desc = "Get wordcount and estimated read time" })
+
+-- Telescope
+keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
+keymap.set("n", "<leader>fg", "<cmd>Telescope git_files<cr>", { desc = "Fuzzy find git files in cwd" })
+keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
+keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
+keymap.set("n", "<leader>fc", "<cmd>Telescope git_bcommits<cr>", { desc = "Find file in previous git commits" })
+keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "Find todos" })
+keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Fuzzy find buffers" })
+keymap.set("n", "<leader>fd", "<cmd>Telescope zoxide list<cr>", { desc = "Fuzzy find zoxide directory" })
+keymap.set("n", "<leader>fp", "<cmd>Telescope neoclip<cr>", { desc = "Fuzzy find copy/paste registers" })
+keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", { desc = "Fuzzy find help tags" })

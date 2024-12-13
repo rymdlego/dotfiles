@@ -1,6 +1,8 @@
 return {
   "echasnovski/mini.nvim",
   version = "*",
+  event = { "BufReadPre", "BufNewFile" },
+  -- event = "VeryLazy",
   config = function()
     require("mini.git").setup()
     require("mini.statusline").setup()

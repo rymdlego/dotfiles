@@ -35,7 +35,7 @@ if [ -n "$selected" ]; then
   az account set --subscription "$subscription_id"
 
   echo "Switched to subscription \"$subscription_name\"."
-  sketchybar --trigger azure_subscription_switch
+  # sketchybar --trigger azure_subscription_switch
 else
   echo "No subscription selected"
 fi

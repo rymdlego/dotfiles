@@ -9,7 +9,7 @@
 
 alias ax "azure_subscription_switcher"
 alias cat "bat -p"
-alias kx "kubernetes-context-switcher --sketchybar"
+alias kx "kubernetes-context-switcher"
 alias l "eza --color=always --git --no-filesize --icons --no-time --no-user --no-permissions"
 alias la "l -la"
 # alias ls "eza --icons"

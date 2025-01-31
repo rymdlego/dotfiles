@@ -48,4 +48,7 @@ palette = 15=#909dab
 background = 22282f
 foreground = adbac7
 cursor-color = adbac7
-selection-background = 22272e
+#selection-background = 22272e
+cursor-invert-fg-bg = true
+selection-invert-fg-bg = true
+minimum-contrast = 1.1

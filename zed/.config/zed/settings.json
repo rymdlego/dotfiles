@@ -21,8 +21,8 @@
   "vim_mode": true,
   "ui_font_size": 18,
   "buffer_font_size": 18,
-  // "buffer_font_family": "JetBrainsMono Nerd Font",
-  // "ui_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "ui_font_family": "JetBrainsMono Nerd Font",
   "theme": {
     "mode": "system",
     "light": "Github Light",
@@ -31,11 +31,11 @@
   "experimental.theme_overrides": {
     // "editor.background": "#333",
     // "panel.background": "#22282f",
-    "players": [
-      {
-        "cursor": "#fff"
-      }
-    ],
+    // "players": [
+    //   {
+    //     "cursor": "#fff"
+    //   }
+    // ],
     "syntax": {
       "comment": {
         "font_style": "italic"

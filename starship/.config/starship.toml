@@ -60,7 +60,8 @@ symbol = " "
 # style = "bg:panel fg:yellow_bright"
 style = "fg:yellow_bright"
 # format = "[](fg:panel)[ $symbol$branch ]($style)[](fg:panel) "
-format = "[ $symbol$branch]($style) "
+# format = "[ $symbol$branch]($style) "
+format = "[$branch]($style) "
 
 [python]
 symbol = "py "

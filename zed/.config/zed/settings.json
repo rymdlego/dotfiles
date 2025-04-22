@@ -7,22 +7,43 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "git_panel": {
+    "dock": "right"
+  },
   "assistant": {
     "default_model": {
       "provider": "copilot_chat",
-      "model": "claude-3-5-sonnet"
+      "model": "claude-3-7-sonnet"
     },
-    "version": "2"
+    "version": "2",
+    "enable_experimental_live_diffs": true
   },
   "vim_mode": true,
   "ui_font_size": 18,
   "buffer_font_size": 18,
-  "buffer_font_family": "JetBrainsMono Nerd Font",
-  "ui_font_family": "JetBrainsMono Nerd Font",
+  // "buffer_font_family": "JetBrainsMono Nerd Font",
+  // "ui_font_family": "JetBrainsMono Nerd Font",
   "theme": {
     "mode": "system",
-    "light": "One Light",
+    "light": "Github Light",
     "dark": "One Dark"
+  },
+  "experimental.theme_overrides": {
+    // "editor.background": "#333",
+    // "panel.background": "#22282f",
+    "players": [
+      {
+        "cursor": "#fff"
+      }
+    ],
+    "syntax": {
+      "comment": {
+        "font_style": "italic"
+      },
+      "comment.doc": {
+        "font_style": "italic"
+      }
+    }
   },
   "git": {
     "git_gutter": "tracked_files",
@@ -31,5 +52,11 @@
       "delay_ms": 800,
       "show_commit_summary": true
     }
+  },
+  "telemetry": {
+    // Send debug info like crash reports.
+    "diagnostics": false,
+    // Send anonymized usage data like what languages you're using Zed with.
+    "metrics": false
   }
 }

@@ -8,11 +8,15 @@
 [
   {
     "bindings": {
+      "ctrl-m": "editor::SelectLargerSyntaxNode",
+      "ctrl-shift-m": "editor::SelectSmallerSyntaxNode",
       "ctrl-h": "workspace::ActivatePaneLeft",
       "ctrl-l": "workspace::ActivatePaneRight",
       "ctrl-k": "workspace::ActivatePaneUp",
       "ctrl-j": "workspace::ActivatePaneDown",
-      "ctrl-f": "file_finder::Toggle"
+      "ctrl-f": "file_finder::Toggle",
+      "cmd-g": "git_panel::ToggleFocus",
+      "cmd-k": "agent::ToggleFocus"
     }
   },
   {
@@ -26,6 +30,21 @@
       "ctrl-g d": "git::Diff",
       "cmd-ctrl-y": "git::StageAll",
       "cmd-ctrl-shift-y": "git::UnstageAll"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal && vim_operator == none && !VimWaiting",
+    "bindings": {
+      "space f": "workspace::ToggleLeftDock",
+      "space t": "workspace::ToggleBottomDock"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "cmd-n": "workspace::NewTerminal",
+      "cmd-w": "pane::CloseActiveItem",
+      "cmd-f": "workspace::ToggleZoom"
     }
   }
 ]

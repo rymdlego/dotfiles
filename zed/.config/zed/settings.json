@@ -7,13 +7,32 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "show_edit_predictions": true,
+  "languages": {
+    "CSharp": {
+      "show_edit_predictions": true
+    }
+  },
+  "edit_predictions": {
+    "mode": "eager",
+    "copilot": {
+      "proxy": null,
+      "proxy_no_verify": null
+    },
+    "enabled_in_text_threads": false
+  },
+  "features": {
+    "edit_prediction_provider": "copilot"
+  },
   "git_panel": {
     "dock": "right"
   },
   "assistant": {
+    "always_allow_tool_actions": true,
+    "default_profile": "write",
     "default_model": {
-      "provider": "copilot_chat",
-      "model": "claude-3-7-sonnet"
+      "provider": "zed.dev",
+      "model": "claude-3-7-sonnet-latest"
     },
     "version": "2",
     "enable_experimental_live_diffs": true
@@ -22,7 +41,7 @@
   "ui_font_size": 18,
   "buffer_font_size": 18,
   "buffer_font_family": "JetBrainsMono Nerd Font",
-  "ui_font_family": "JetBrainsMono Nerd Font",
+  // "ui_font_family": "JetBrainsMono Nerd Font",
   "theme": {
     "mode": "system",
     "light": "Github Light",

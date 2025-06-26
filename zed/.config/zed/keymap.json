@@ -7,18 +7,26 @@
 // from the command palette.
 [
   {
+    "context": "ProjectPanel && not_editing",
     "bindings": {
-      "ctrl-m": "editor::SelectLargerSyntaxNode",
-      "ctrl-shift-m": "editor::SelectSmallerSyntaxNode",
-      "ctrl-h": "workspace::ActivatePaneLeft",
-      "ctrl-l": "workspace::ActivatePaneRight",
-      "ctrl-k": "workspace::ActivatePaneUp",
-      "ctrl-j": "workspace::ActivatePaneDown",
-      "ctrl-f": "file_finder::Toggle",
-      "cmd-g": "git_panel::ToggleFocus",
-      "cmd-k": "agent::ToggleFocus"
+      "s l": "workspace::ActivatePaneRight"
     }
   },
+  // {
+  //   "bindings": {
+  //     "space f": "file_finder::Toggle",
+  //     "space g g": "git_panel::ToggleFocus",
+  //     "space g d": "git::Diff",
+  //     "space a": "agent::ToggleFocus",
+  //     "space z": "workspace::ToggleZoom"
+  //   }
+  // },
+  // {
+  //   "context": "AgentPanel",
+  //   "bindings": {
+  //     "shift-y": ["workspace::SendKeystrokes", "cmd-r"]
+  //   }
+  // },
   {
     "context": "GitPanel",
     "use_key_equivalents": true,
@@ -28,23 +36,113 @@
       "ctrl-g p": "git::Pull",
       "ctrl-g shift-up": "git::ForcePush",
       "ctrl-g d": "git::Diff",
-      "cmd-ctrl-y": "git::StageAll",
-      "cmd-ctrl-shift-y": "git::UnstageAll"
+      // "space c": "git::Commit",
+      "space s a": "git::StageAll",
+      "space u a": "git::UnstageAll",
+      "cmd-ctrl-shift-y": "git::UnstageAll",
+      "s l": "workspace::ActivatePaneRight"
     }
   },
   {
-    "context": "Editor && vim_mode == normal && vim_operator == none && !VimWaiting",
+    "context": "GitCommit > Editor",
     "bindings": {
-      "space f": "workspace::ToggleLeftDock",
-      "space t": "workspace::ToggleBottomDock"
+      "cmd-enter": "git::Commit",
+      "cmd-shift-enter": "git::Amend",
+      "cmd-m": "git::GenerateCommitMessage"
+    }
+  },
+  // {
+  //   "context": "Editor",
+  //   "bindings": {
+  //     "shift-y": ["workspace::SendKeystrokes", "cmd-k"]
+  //   }
+  // },
+  // {
+  //   "context": "Editor && vim_mode == normal && vim_operator == none && !VimWaiting",
+  //   "bindings": {
+  //     // "space f": "workspace::ToggleLeftDock",
+  //     "space t": "workspace::ToggleBottomDock",
+  //     "space a": "agent::ToggleFocus",
+  //     // "space g": "git_panel::ToggleFocus",
+  //     "space d d": "diagnostics::Deploy",
+  //     "space s a": "editor::SelectAllMatches",
+  //     "space e": "editor::Hover"
+  //   }
+  // },
+  {
+    "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
+    "bindings": {
+      // Key-bindings for normal & visual mode
+      //
+      // Block selection
+      "ctrl-m": "editor::SelectLargerSyntaxNode",
+      "ctrl-shift-m": "editor::SelectSmallerSyntaxNode",
+      // Open markdown preview
+      "space m p": "markdown::OpenPreview",
+      "space m P": "markdown::OpenPreviewToTheSide"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "bindings": {
+      // Key-bindings to work only in normal mode
+      "space e": "editor::Hover",
+
+      // Buffers
+      "s v": "pane::SplitRight",
+      "s s": "pane::SplitDown",
+      "s l": "workspace::ActivatePaneRight",
+      "s h": "workspace::ActivatePaneLeft",
+      "s k": "workspace::ActivatePaneUp",
+      "s j": "workspace::ActivatePaneDown",
+      "space h": "pane::ActivatePreviousItem",
+      "space l": "pane::ActivateNextItem",
+      "space c": "pane::CloseActiveItem",
+      "space p f": "file_finder::Toggle",
+      "space p s": "pane::DeploySearch",
+      "space f": "editor::Format",
+      "space m": "tab_switcher::Toggle",
+      "ctrl-w l": "workspace::ToggleRightDock",
+      "ctrl-w h": "workspace::ToggleLeftDock",
+      "ctrl-w j": "workspace::ToggleBottomDock",
+
+      // Error navigation
+      "] e": "editor::GoToDiagnostic",
+      "[ e": "editor::GoToPreviousDiagnostic",
+
+      // Git
+      "space g g": "git_panel::ToggleFocus",
+      "space g d": "git::Diff",
+      "g h": "editor::GoToHunk",
+      "g H": "editor::GoToPreviousHunk",
+      "g s": "git::ToggleStaged",
+      "g d": "editor::ToggleSelectedDiffHunks",
+      "g r": "git::Restore",
+      // Project
+      "space f f": "project_panel::ToggleFocus",
+      // Agent
+      "space a a": "agent::ToggleFocus",
+      // Outline
+      "space o o": "outline_panel::ToggleFocus",
+      // Terminal
+      "space t t": "terminal_panel::ToggleFocus"
     }
   },
   {
     "context": "Terminal",
+    "use_key_equivalents": true,
     "bindings": {
-      "cmd-n": "workspace::NewTerminal",
-      "cmd-w": "pane::CloseActiveItem",
-      "cmd-f": "workspace::ToggleZoom"
+      // Key-bindings for being in terminal
+      "ctrl-w k": "terminal_panel::ToggleFocus",
+      "s k": "workspace::ActivatePaneUp"
+    }
+  },
+  {
+    "context": "OutlinePanel",
+    // "use_key_equivalents": true,
+    "bindings": {
+      // Key-bindings for being in terminal
+      "s l": "workspace::ActivatePaneRight"
     }
   }
 ]

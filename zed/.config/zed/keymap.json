@@ -1,32 +1,18 @@
-// Zed keymap
-//
-// For information on binding keys, see the Zed
-// documentation: https://zed.dev/docs/key-bindings
-//
-// To see the default key bindings run `zed: open default keymap`
-// from the command palette.
 [
+  {
+    "bindings": {
+      "cmd-g": "git_panel::ToggleFocus",
+      "cmd-f": "project_panel::ToggleFocus",
+      "cmd-y": "outline_panel::ToggleFocus",
+      "cmd-k": "agent::ToggleFocus"
+    }
+  },
   {
     "context": "ProjectPanel && not_editing",
     "bindings": {
       "s l": "workspace::ActivatePaneRight"
     }
   },
-  // {
-  //   "bindings": {
-  //     "space f": "file_finder::Toggle",
-  //     "space g g": "git_panel::ToggleFocus",
-  //     "space g d": "git::Diff",
-  //     "space a": "agent::ToggleFocus",
-  //     "space z": "workspace::ToggleZoom"
-  //   }
-  // },
-  // {
-  //   "context": "AgentPanel",
-  //   "bindings": {
-  //     "shift-y": ["workspace::SendKeystrokes", "cmd-r"]
-  //   }
-  // },
   {
     "context": "GitPanel",
     "use_key_equivalents": true,
@@ -51,24 +37,6 @@
       "cmd-m": "git::GenerateCommitMessage"
     }
   },
-  // {
-  //   "context": "Editor",
-  //   "bindings": {
-  //     "shift-y": ["workspace::SendKeystrokes", "cmd-k"]
-  //   }
-  // },
-  // {
-  //   "context": "Editor && vim_mode == normal && vim_operator == none && !VimWaiting",
-  //   "bindings": {
-  //     // "space f": "workspace::ToggleLeftDock",
-  //     "space t": "workspace::ToggleBottomDock",
-  //     "space a": "agent::ToggleFocus",
-  //     // "space g": "git_panel::ToggleFocus",
-  //     "space d d": "diagnostics::Deploy",
-  //     "space s a": "editor::SelectAllMatches",
-  //     "space e": "editor::Hover"
-  //   }
-  // },
   {
     "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
     "bindings": {
@@ -98,10 +66,9 @@
       "space h": "pane::ActivatePreviousItem",
       "space l": "pane::ActivateNextItem",
       "space c": "pane::CloseActiveItem",
-      "space p f": "file_finder::Toggle",
       "space p s": "pane::DeploySearch",
       "space f": "editor::Format",
-      "space m": "tab_switcher::Toggle",
+      "space t": "tab_switcher::Toggle",
       "ctrl-w l": "workspace::ToggleRightDock",
       "ctrl-w h": "workspace::ToggleLeftDock",
       "ctrl-w j": "workspace::ToggleBottomDock",
@@ -111,21 +78,20 @@
       "[ e": "editor::GoToPreviousDiagnostic",
 
       // Git
-      "space g g": "git_panel::ToggleFocus",
       "space g d": "git::Diff",
       "g h": "editor::GoToHunk",
       "g H": "editor::GoToPreviousHunk",
       "g s": "git::ToggleStaged",
       "g d": "editor::ToggleSelectedDiffHunks",
-      "g r": "git::Restore",
-      // Project
-      "space f f": "project_panel::ToggleFocus",
-      // Agent
-      "space a a": "agent::ToggleFocus",
-      // Outline
-      "space o o": "outline_panel::ToggleFocus",
-      // Terminal
-      "space t t": "terminal_panel::ToggleFocus"
+      "g r": "git::Restore"
+    }
+  },
+  {
+    "context": "AgentPanel",
+    "use_key_equivalents": true,
+    "bindings": {
+      // Key-bindings for being in agent panel
+      "s h": "workspace::ActivatePaneLeft"
     }
   },
   {

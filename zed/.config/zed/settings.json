@@ -97,8 +97,7 @@
     "**/.classpath",
     "**/.settings",
     "**/dist",
-    "**/.vscode",
-    "**/*.uid"
+    "**/.vscode"
   ],
   "telemetry": {
     // Send debug info like crash reports.

@@ -10,7 +10,7 @@
   {
     "context": "ProjectPanel && not_editing",
     "bindings": {
-      "s l": "workspace::ActivatePaneRight"
+      "ctrl-shift-l": "workspace::ActivatePaneRight"
     }
   },
   {
@@ -26,7 +26,7 @@
       "space s a": "git::StageAll",
       "space u a": "git::UnstageAll",
       "cmd-ctrl-shift-y": "git::UnstageAll",
-      "s l": "workspace::ActivatePaneRight"
+      "ctrl-shift-l": "workspace::ActivatePaneRight"
     }
   },
   {
@@ -59,10 +59,10 @@
       // Buffers
       "s v": "pane::SplitRight",
       "s s": "pane::SplitDown",
-      "s l": "workspace::ActivatePaneRight",
-      "s h": "workspace::ActivatePaneLeft",
-      "s k": "workspace::ActivatePaneUp",
-      "s j": "workspace::ActivatePaneDown",
+      "ctrl-shift-l": "workspace::ActivatePaneRight",
+      "ctrl-shift-h": "workspace::ActivatePaneLeft",
+      "ctrl-shift-k": "workspace::ActivatePaneUp",
+      "ctrl-shift-j": "workspace::ActivatePaneDown",
       "space h": "pane::ActivatePreviousItem",
       "space l": "pane::ActivateNextItem",
       "space c": "pane::CloseActiveItem",
@@ -91,7 +91,7 @@
     "use_key_equivalents": true,
     "bindings": {
       // Key-bindings for being in agent panel
-      "s h": "workspace::ActivatePaneLeft"
+      "ctrl-shift-h": "workspace::ActivatePaneLeft"
     }
   },
   {
@@ -100,7 +100,7 @@
     "bindings": {
       // Key-bindings for being in terminal
       "ctrl-w k": "terminal_panel::ToggleFocus",
-      "s k": "workspace::ActivatePaneUp"
+      "ctrl-shift-k": "workspace::ActivatePaneUp"
     }
   },
   {
@@ -108,7 +108,7 @@
     // "use_key_equivalents": true,
     "bindings": {
       // Key-bindings for being in terminal
-      "s l": "workspace::ActivatePaneRight"
+      "ctrl-shift-l": "workspace::ActivatePaneRight"
     }
   }
 ]

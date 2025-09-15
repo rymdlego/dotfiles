@@ -3,10 +3,9 @@
     "always_allow_tool_actions": true,
     "default_profile": "write",
     "default_model": {
-      "provider": "zed.dev",
+      "provider": "copilot_chat",
       "model": "claude-sonnet-4"
-    },
-    "version": "2"
+    }
   },
   "show_edit_predictions": true,
   "languages": {
@@ -23,7 +22,7 @@
     "enabled_in_text_threads": false
   },
   "features": {
-    "edit_prediction_provider": "zed"
+    "edit_prediction_provider": "copilot"
   },
   "lsp_document_colors": "inlay",
   "inline_code_actions": false,
@@ -46,13 +45,14 @@
   "scrollbar": {
     "show": "never"
   },
-  // "git_panel": {
-  //   "dock": "right"
-  // },
+  "git_panel": {
+    "dock": "left"
+  },
+  "format_on_save": "off",
   "vim_mode": true,
-  "ui_font_family": "Monaspace Neon",
-  // "buffer_font_family": "JetBrainsMono Nerd Font",
-  "buffer_font_family": "Monaspace Neon",
+  // "ui_font_family": "Monaspace Neon",
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  // "buffer_font_family": "Monaspace Neon",
   "ui_font_size": 20,
   "buffer_font_size": 18,
   "relative_line_numbers": true,

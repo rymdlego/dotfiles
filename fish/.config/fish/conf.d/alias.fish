@@ -10,6 +10,8 @@
 alias ax "azure_subscription_switcher"
 alias cat "bat -p"
 alias kx "kubernetes-context-switcher"
+alias kfail='kubectl get pods -A | grep -vE "Running|Completed|STATUS"'
+alias kc="kubecolor"
 alias l "eza --color=always --git --no-filesize --icons --no-time --no-user --no-permissions"
 alias la "l -la"
 # alias ls "eza --icons"

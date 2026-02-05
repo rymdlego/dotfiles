@@ -23,7 +23,6 @@ abbr ks "k9s"
 abbr n "note"
 abbr ng "note git"
 
-abbr p "pass"
-abbr pg "pass git"
+abbr p "ping"
 
 abbr tf "terraform"

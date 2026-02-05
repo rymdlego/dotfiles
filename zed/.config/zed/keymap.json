@@ -4,7 +4,9 @@
       "cmd-g": "git_panel::ToggleFocus",
       "cmd-f": "project_panel::ToggleFocus",
       "cmd-y": "outline_panel::ToggleFocus",
-      "cmd-k": "agent::ToggleFocus"
+      "cmd-k": "agent::ToggleFocus",
+      "ctrl-g p": "git::Pull",
+      "ctrl-g P": "git::Push"
     }
   },
   {

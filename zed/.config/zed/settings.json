@@ -1,19 +1,14 @@
 {
   "context_servers": {
     "prometheus-observer-remote": {
-      "settings": {},
-
-      "enabled": true,
-      "url": "https://prometheus-observer.platform.bob.azure.icaintern.se/sse"
+      "enabled": false,
+      "remote": false,
+      "settings": {}
     },
     "prometheus-observer": {
-      "env": {},
-      "args": [],
-      "command": "/Users/glz632/dev/prometheus-observer-mcp/prometheus-observer-mcp",
+      "enabled": false,
       "remote": false,
-      "timeout": null,
-      "settings": {},
-      "enabled": true
+      "settings": {}
     }
   },
   "agent": {
@@ -31,15 +26,13 @@
     }
   },
   "edit_predictions": {
+    "provider": "copilot",
     "mode": "eager",
     "copilot": {
       "proxy": null,
       "proxy_no_verify": null
     },
     "enabled_in_text_threads": false
-  },
-  "features": {
-    "edit_prediction_provider": "copilot"
   },
   "lsp_document_colors": "inlay",
   "inline_code_actions": false,
@@ -72,7 +65,7 @@
   // "buffer_font_family": "Monaspace Neon",
   "ui_font_size": 20,
   "buffer_font_size": 18,
-  "relative_line_numbers": false,
+  "relative_line_numbers": "disabled",
   "hide_mouse": "on_typing_and_movement",
   "theme": {
     "mode": "system",

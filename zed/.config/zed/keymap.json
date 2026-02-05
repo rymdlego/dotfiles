@@ -26,7 +26,10 @@
       "space s a": "git::StageAll",
       "space u a": "git::UnstageAll",
       "cmd-ctrl-shift-y": "git::UnstageAll",
-      "ctrl-shift-l": "workspace::ActivatePaneRight"
+      "ctrl-shift-l": "workspace::ActivatePaneRight",
+      "cmd-a": "git::StageAll",
+      "cmd-s": "git::GenerateCommitMessage",
+      "cmd-c": "git::Commit"
     }
   },
   {
@@ -100,7 +103,10 @@
     "bindings": {
       // Key-bindings for being in terminal
       "ctrl-w k": "terminal_panel::ToggleFocus",
-      "ctrl-shift-k": "workspace::ActivatePaneUp"
+      "ctrl-shift-h": "workspace::ActivatePaneLeft",
+      "ctrl-shift-l": "workspace::ActivatePaneRight",
+      "ctrl-shift-k": "workspace::ActivatePaneUp",
+      "ctrl-shift-j": "workspace::ActivatePaneDown"
     }
   },
   {

@@ -1,4 +1,3 @@
-tap "homebrew/bundle"
 tap "joshmedeski/sesh"
 brew "bat"
 brew "direnv"

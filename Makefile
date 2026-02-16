@@ -9,10 +9,10 @@ brew:
 				brew bundle
 
 stow:
-				stow --verbose --target=$$HOME --restow */
+				stow --no-folding --verbose --target=$$HOME --restow */
 
 unstow:
-				stow --verbose --target=$$HOME --delete */
+				stow --no-folding --verbose --target=$$HOME --delete */
 
 devops:
 				brew bundle --file Brewfile_devops

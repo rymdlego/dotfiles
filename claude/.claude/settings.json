@@ -1,0 +1,42 @@
+{
+  "model": "opus",
+  "statusLine": {
+    "type": "command",
+    "command": "bash ~/.claude/statusline-context.sh"
+  },
+  "spinnerVerbs": {
+    "mode": "replace",
+    "verbs": [
+      "Provisioning infrastructure",
+      "Orchestrating containers",
+      "Wrangling YAML",
+      "Scaling horizontally",
+      "Debugging in prod",
+      "Rolling back deployment",
+      "Tuning autoscalers",
+      "Fighting the K8s API",
+      "Updating Terraform state",
+      "Chasing runaway pods",
+      "Optimizing request latency",
+      "Wrestling with Helm charts",
+      "Analyzing CloudWatch metrics",
+      "Battling YAML indentation",
+      "Draining nodes gracefully",
+      "Hardening security policies",
+      "Rotating secrets",
+      "Investigating OOMKilled pods",
+      "Tuning JVM garbage collection",
+      "Sharding databases",
+      "Configuring service mesh",
+      "Implementing circuit breakers",
+      "Stress testing endpoints",
+      "Hunting memory leaks",
+      "Upgrading control plane",
+      "Migrating to microservices",
+      "Optimizing Docker layers",
+      "Fixing broken pipelines",
+      "Tweaking resource limits",
+      "Monitoring SLO burn rate"
+    ]
+  }
+}

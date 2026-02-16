@@ -4,5 +4,6 @@ fish/.config/fish/fish_variables
 commands/.local/state
 commands/.local/share
 zed/.config/zed/prompts/
+zed/.config/zed/settings.json
 zed/.config/zed/settings_backup.json
 gp.lua

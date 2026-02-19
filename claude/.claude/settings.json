@@ -19,13 +19,11 @@
       "Chasing runaway pods",
       "Optimizing request latency",
       "Wrestling with Helm charts",
-      "Analyzing CloudWatch metrics",
       "Battling YAML indentation",
       "Draining nodes gracefully",
       "Hardening security policies",
       "Rotating secrets",
       "Investigating OOMKilled pods",
-      "Tuning JVM garbage collection",
       "Sharding databases",
       "Configuring service mesh",
       "Implementing circuit breakers",
@@ -36,7 +34,6 @@
       "Optimizing Docker layers",
       "Fixing broken pipelines",
       "Tweaking resource limits",
-      "Monitoring SLO burn rate"
     ]
   }
 }

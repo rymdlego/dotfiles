@@ -59,6 +59,7 @@ end
 
 # vi-mode (hybrid mode)
 fish_hybrid_key_bindings
+bind -M insert \cn down-or-search
 
 
 # Direnv

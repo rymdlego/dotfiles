@@ -1,5 +1,6 @@
 tap "joshmedeski/sesh"
 brew "bat"
+brew "chafa"
 brew "direnv"
 brew "eza"
 brew "fastfetch"

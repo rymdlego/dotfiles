@@ -9,6 +9,7 @@
 
 alias ax "azure_subscription_switcher"
 alias cat "bat -p"
+alias img "chafa"
 alias kx "kubernetes-context-switcher"
 alias kfail='kubectl get pods -A | grep -vE "Running|Completed|STATUS"'
 alias kc="kubecolor"

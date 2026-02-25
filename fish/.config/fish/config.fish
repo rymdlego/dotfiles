@@ -9,7 +9,7 @@
 
 
 # Path
-set -x PATH $HOME/.local/bin $PATH
+set -x PATH $HOME/.local/bin $HOME/.cargo/bin $PATH
 
 
 # Environment variables

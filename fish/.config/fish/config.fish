@@ -55,6 +55,9 @@ end
 if type -q note
     note completion fish | source # 'rymdlego/note'
 end
+if type -q atuin
+    atuin init fish | source
+end
 
 
 # vi-mode (hybrid mode)

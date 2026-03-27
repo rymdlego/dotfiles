@@ -1,4 +1,5 @@
 tap "joshmedeski/sesh"
+brew "atuin"
 brew "bat"
 brew "chafa"
 brew "direnv"

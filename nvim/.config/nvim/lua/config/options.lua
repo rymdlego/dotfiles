@@ -1,37 +1,39 @@
-vim.opt.guicursor = ""
-vim.opt.cursorline = true
+local opt = vim.opt
 
-vim.opt.relativenumber = false
-vim.opt.number = true
+opt.guicursor = ""
+opt.cursorline = true
 
-vim.opt.signcolumn = "yes"
+opt.relativenumber = false
+opt.number = true
 
-vim.opt.errorbells = false
+opt.signcolumn = "yes"
 
-vim.opt.tabstop = 2
-vim.opt.softtabstop = 2
-vim.opt.shiftwidth = 2
-vim.opt.expandtab = true
-vim.opt.smartindent = true
-vim.opt.autoindent = true
+opt.errorbells = false
 
-vim.opt.wrap = false
-vim.opt.linebreak = true
+opt.tabstop = 2
+opt.softtabstop = 2
+opt.shiftwidth = 2
+opt.expandtab = true
+opt.smartindent = true
+opt.autoindent = true
 
-vim.opt.hlsearch = false
-vim.opt.incsearch = true
+opt.wrap = false
+opt.linebreak = true
 
-vim.opt.scrolloff = 2000
-vim.opt.scroll = 8
+opt.hlsearch = false
+opt.incsearch = true
 
-vim.opt.clipboard = "unnamed"
+opt.scrolloff = 2000
+opt.scroll = 8
 
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
+opt.clipboard = "unnamed"
 
-vim.opt.termguicolors = true
+opt.ignorecase = true
+opt.smartcase = true
 
-vim.opt.backspace = "indent,eol,start"
+opt.termguicolors = true
 
-vim.opt.splitright = true
-vim.opt.splitbelow = true
+opt.backspace = "indent,eol,start"
+
+opt.splitright = true
+opt.splitbelow = true

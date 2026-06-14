@@ -5,6 +5,10 @@
       "cmd-f": "project_panel::ToggleFocus",
       "cmd-y": "outline_panel::ToggleFocus",
       "cmd-k": "agent::ToggleFocus",
+      "cmd-alt-c": [
+        "agent::NewExternalAgentThread",
+        { "agent": { "custom": { "name": "codex-acp" } } }
+      ],
       "ctrl-g p": "git::Pull",
       "ctrl-g P": "git::Push"
     }
@@ -31,6 +35,10 @@
       "ctrl-shift-l": "workspace::ActivatePaneRight",
       "cmd-a": "git::StageAll",
       "cmd-s": "git::GenerateCommitMessage",
+      "cmd-alt-c": [
+        "agent::NewExternalAgentThread",
+        { "agent": { "custom": { "name": "codex-acp" } } }
+      ],
       "cmd-c": "git::Commit"
     }
   },
@@ -39,7 +47,11 @@
     "bindings": {
       "cmd-enter": "git::Commit",
       "cmd-shift-enter": "git::Amend",
-      "cmd-m": "git::GenerateCommitMessage"
+      "cmd-m": "git::GenerateCommitMessage",
+      "cmd-alt-c": [
+        "agent::NewExternalAgentThread",
+        { "agent": { "custom": { "name": "codex-acp" } } }
+      ]
     }
   },
   {

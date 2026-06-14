@@ -1,0 +1,107 @@
+{
+  // --- Appearance ---
+  "cli_default_open_behavior": "existing_window",
+  "project_panel": {
+    "dock": "right"
+  },
+  "outline_panel": {
+    "dock": "right"
+  },
+  "collaboration_panel": {
+    "dock": "right"
+  },
+  "git_panel": {
+    "dock": "right"
+  },
+  "icon_theme": "JetBrains New UI Icons (Dark)",
+  "theme": "Github Plus Dark",
+  "ui_font_family": "Monaspace Neon NF",
+  "ui_font_size": 16,
+  "buffer_font_family": "Monaspace Neon NF",
+  "buffer_font_size": 14,
+
+  // --- Editor behavior ---
+  "vim_mode": true,
+  "hide_mouse": "on_typing_and_movement",
+
+  // --- AI / predictions ---
+  "agent_servers": {
+    "codex-acp": {
+      "type": "registry",
+    },
+    "claude-acp": {
+      "default_config_options": {
+        "model": "opus[1m]",
+        "mode": "acceptEdits"
+      },
+      "type": "registry",
+    },
+  },
+  "agent": {
+    "dock": "left",
+    "default_model": {
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-6-latest",
+    },
+    "commit_message_model": {
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4-5",
+    },
+  },
+  "show_edit_predictions": true,
+  "edit_predictions": {
+    "provider": "zed",
+    "mode": "eager",
+  },
+
+  // --- UI chrome ---
+  "minimap": {
+    "show": "always",
+  },
+  "scrollbar": {
+    "show": "never",
+  },
+  "tab_bar": {
+    "show": false,
+  },
+  "toolbar": {
+    "breadcrumbs": true,
+    "quick_actions": false,
+    "code_actions": true,
+    "selections_menu": false,
+  },
+  "search": {
+    "button": false,
+    "case_sensitive": true,
+  },
+
+  // --- Git ---
+  "git": {
+    "git_gutter": "tracked_files",
+    "inline_blame": {
+      "enabled": true,
+      "delay_ms": 1200,
+      "show_commit_summary": true,
+    },
+  },
+
+  // --- Files ---
+  "file_scan_exclusions": [
+    "**/.git",
+    "**/.svn",
+    "**/.hg",
+    "**/CVS",
+    "**/.DS_Store",
+    "**/Thumbs.db",
+    "**/.classpath",
+    "**/.settings",
+    "**/dist",
+    "**/.vscode",
+  ],
+
+  // --- Telemetry ---
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
+}

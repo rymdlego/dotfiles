@@ -6,9 +6,12 @@ export HIST_STAMPS="yyyy-mm-dd"
 setopt SHARE_HISTORY
 setopt HIST_FIND_NO_DUPS
 
+# Use key files directly rather than an inherited or forwarded SSH agent.
+unset SSH_AUTH_SOCK SSH_AGENT_PID
+
 # VARS
-export EDITOR="nvim"
-export GIT_EDITOR="nvim"
+export EDITOR="zed --wait"
+export GIT_EDITOR="zed --wait"
 export MANPAGER="less -X" # don’t clear the screen after quitting a manual page
 export BAT_THEME="Catppuccin-frappe"
 
@@ -60,5 +63,8 @@ fi
 [ -f "$HOME/.zsh/functions.zsh" ] && source "$HOME/.zsh/functions.zsh"
 [ -f "$HOME/.zsh/aliases.zsh" ] && source "$HOME/.zsh/aliases.zsh"
 [ -f "$HOME/.zsh/fzf.zsh" ] && source "$HOME/.zsh/fzf.zsh"
-[ -f "$HOME/.zsh/motd.zsh" ] && source "$HOME/.zsh/motd.zsh"
-[ -f "$HOME/.zsh/ssh-agent.zsh" ] && source "$HOME/.zsh/ssh-agent.zsh"
+
+# DIRENV
+if command -v direnv >/dev/null 2>&1; then
+	eval "$(direnv hook zsh)"
+fi

@@ -1,4 +1,7 @@
-# custom-shader = "./cubes.glsl"
+# Use macOS Zsh even when a parent app still has an old SHELL value.
+command = /bin/zsh
+env = SHELL=/bin/zsh
+
 # background-opacity = 0.90
 # background-blur-radius = 50
 

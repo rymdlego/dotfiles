@@ -1,7 +1,6 @@
 install:
 				./brew_setup.sh
 				make brew stow
-				./fish_setup.sh
 				./tmux_setup.sh
 				bat cache --build
 

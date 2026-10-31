@@ -6,20 +6,10 @@ export HIST_STAMPS="yyyy-mm-dd"
 setopt SHARE_HISTORY
 setopt HIST_FIND_NO_DUPS
 
-# Use key files directly rather than an inherited or forwarded SSH agent.
-unset SSH_AUTH_SOCK SSH_AGENT_PID
-
 # VARS
 export EDITOR="zed --wait"
 export GIT_EDITOR="zed --wait"
 export MANPAGER="less -X" # don’t clear the screen after quitting a manual page
-export BAT_THEME="Catppuccin-frappe"
-
-# NOTES
-export NOTES_PATH=$HOME/notes
-export NOTES_DAILIES=dailies
-export NOTES_PREFIX='- '
-export NOTES_VIEWER=bat
 
 # STARSHIP
 if type starship >/dev/null; then
@@ -36,10 +26,6 @@ bindkey -e                                             # make ctrl-p and other c
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}' # make lowercase tab-complete case insensitive
 
 # COMPLETIONS
-FPATH=$HOME/.zsh/completions:$FPATH
-if type brew &>/dev/null; then
-	FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-fi
 autoload -Uz compinit && compinit
 
 # AZURE CLI

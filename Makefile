@@ -1,17 +1,24 @@
-install:
-				./brew_setup.sh
-				make brew stow
-				./tmux_setup.sh
-				bat cache --build
+PACKAGES = commands ghostty glow starship zed zsh
+DEVOPS_PACKAGES = k9s yamlfmt
+STOW = stow --no-folding --verbose --target=$$HOME
+
+install: brew stow
 
 brew:
-				brew bundle
+	brew bundle
 
 stow:
-				stow --no-folding --verbose --target=$$HOME --restow */
-
-unstow:
-				stow --no-folding --verbose --target=$$HOME --delete */
+	$(STOW) --restow $(PACKAGES)
 
 devops:
-				brew bundle --file Brewfile_devops
+	brew bundle --file Brewfile_devops
+	$(STOW) --restow $(DEVOPS_PACKAGES)
+
+tmux:
+	$(STOW) --restow tmux
+	./tmux_setup.sh
+
+unstow:
+	$(STOW) --delete $(PACKAGES) $(DEVOPS_PACKAGES) tmux
+
+.PHONY: install brew stow devops tmux unstow

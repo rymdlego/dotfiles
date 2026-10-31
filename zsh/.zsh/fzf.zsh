@@ -1,10 +1,6 @@
 #!/bin/zsh
 
 # Init
-if [[ ! "$PATH" == */opt/homebrew/opt/fzf/bin* ]]; then
-  PATH="${PATH:+${PATH}:}/opt/homebrew/opt/fzf/bin"
-fi
-
 source <(fzf --zsh)
 # eval "$(fzf --zsh)"
 
@@ -20,7 +16,7 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND --type d"
 
 # Previews
-export FZF_CTRL_T_OPTS="--preview 'bat -n --color=always --line-range :500 {}'"
+export FZF_CTRL_T_OPTS="--preview 'head -500 {}'"
 export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
 
 # Change the ** trigger to .
@@ -52,6 +48,6 @@ _fzf_comprun() {
   cd | tree) fzf --preview 'eza --tree --color=always {} | head -200' "$@" ;;
   export | unset) fzf --preview "eval 'echo $'{}" "$@" ;;
   ssh | ping) fzf --preview 'dig {}' "$@" ;;
-  *) fzf --preview "bat -n --color=always --line-range :500 {}" "$@" ;;
+  *) fzf --preview "head -500 {}" "$@" ;;
   esac
 }

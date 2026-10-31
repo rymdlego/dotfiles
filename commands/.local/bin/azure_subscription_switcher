@@ -25,7 +25,7 @@ if [ "$line_count" -eq 1 ]; then
 else
   # Display the subscriptions using fzf
   display_count=$((line_count + 5))
-  selected=$(echo "$subscriptions" | fzf-tmux -p -h "$display_count" --info hidden --border-label=" Azure Subscriptions " --delimiter='\t')
+  selected=$(echo "$subscriptions" | fzf --height "$display_count" --info hidden --border-label=" Azure Subscriptions " --delimiter='\t')
 fi
 
 if [ -n "$selected" ]; then
@@ -35,7 +35,6 @@ if [ -n "$selected" ]; then
   az account set --subscription "$subscription_id"
 
   echo "Switched to subscription \"$subscription_name\"."
-  # sketchybar --trigger azure_subscription_switch
 else
   echo "No subscription selected"
 fi

@@ -23,7 +23,7 @@ fi
 
 # KEYBOARD
 bindkey -e                                             # make ctrl-p and other ctrl-commands work
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}' # make lowercase tab-complete case insensitive
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' # case-insensitive tab completion
 
 # COMPLETIONS
 autoload -Uz compinit && compinit

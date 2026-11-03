@@ -10,7 +10,7 @@ Config files only. Installing links them into `$HOME` with GNU Stow; it does not
 | Command       | What it does                                                          |
 | ------------- | --------------------------------------------------------------------- |
 | `make brew`   | Install the `Brewfile` packages                                       |
-| `make stow`   | Link `commands`, `ghostty`, `glow`, `starship`, `zed`, `zsh`          |
+| `make stow`   | Link `commands`, `copilot`, `ghostty`, `glow`, `starship`, `zed`, `zsh`          |
 | `make devops` | Install `Brewfile_devops` (Kubernetes, Azure, Terraform) and link `k9s`, `yamlfmt` |
 | `make tmux`   | Link the tmux config and clone TPM (meant for Linux; not used on macOS) |
 | `make unstow` | Remove every link this repository created                             |

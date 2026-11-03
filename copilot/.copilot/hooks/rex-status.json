@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "hooks": {
+    "sessionStart": [
+      { "type": "command", "bash": "~/.copilot/hooks/rex-status.sh idle", "timeoutSec": 5 }
+    ],
+    "userPromptSubmitted": [
+      { "type": "command", "bash": "~/.copilot/hooks/rex-status.sh working", "timeoutSec": 5 }
+    ],
+    "postToolUse": [
+      { "type": "command", "bash": "~/.copilot/hooks/rex-status.sh working", "timeoutSec": 5 }
+    ],
+    "postToolUseFailure": [
+      { "type": "command", "bash": "~/.copilot/hooks/rex-status.sh working", "timeoutSec": 5 }
+    ],
+    "notification": [
+      { "type": "command", "matcher": "permission_prompt", "bash": "~/.copilot/hooks/rex-status.sh blocked permission", "timeoutSec": 5 },
+      { "type": "command", "matcher": "elicitation_dialog", "bash": "~/.copilot/hooks/rex-status.sh blocked question", "timeoutSec": 5 }
+    ],
+    "agentStop": [
+      { "type": "command", "bash": "~/.copilot/hooks/rex-status.sh done", "timeoutSec": 5 }
+    ],
+    "errorOccurred": [
+      { "type": "command", "bash": "~/.copilot/hooks/rex-status.sh error", "timeoutSec": 5 }
+    ]
+  }
+}

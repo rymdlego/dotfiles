@@ -1,4 +1,4 @@
-PACKAGES = commands ghostty glow starship zed zsh
+PACKAGES = commands copilot ghostty glow starship zed zsh
 DEVOPS_PACKAGES = k9s yamlfmt
 STOW = stow --no-folding --verbose --target=$$HOME
 
